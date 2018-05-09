@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <main></main>
 </template>
 
 <script>
@@ -7,7 +7,3 @@ export default {
   
 }
 </script>
-
-<style lang="postcss">
-
-</style>
