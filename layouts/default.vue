@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Svgs />
     <Header />
     <div class="Main">
       <nuxt/>
@@ -9,11 +10,13 @@
 </template>
 
 <script>
+import Svgs from '@/components/Svgs'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default {
   components: {
+    Svgs,
     Header,
     Footer,
   },

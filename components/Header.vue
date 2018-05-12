@@ -1,8 +1,12 @@
 <template>
   <header class="Header" :class="{ 'is-open': isOpen }">
 
+    <nuxt-link to="/" class="Header__logo">
+      <SvgIcon title="Logo" file="logo" />
+    </nuxt-link>
+
     <button class="Header__switch" type="button" @click="toggleNav">
-      Menu
+      <span class="Header__burger"></span>
     </button>
 
     <nav class="Header__nav">
@@ -37,7 +41,13 @@
 </template>
 
 <script>
+import SvgIcon from '@/components/SvgIcon'
+
 export default {
+
+  components: {
+    SvgIcon
+  },
   data() {
     return {
       isOpen: false
@@ -60,6 +70,7 @@ export default {
   left: 0;
   width: 100%;
   z-index: var(--z1);
+  text-align: center;
 
   &__switch {
     position: absolute;
@@ -71,6 +82,70 @@ export default {
 
     .Header.is-open & {
       color: var(--grey1);
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    color: var(--white);
+    margin: 0 auto;
+    padding: 50px;
+
+    svg {
+      width: 180px;
+      height: 68px;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    margin-top: calc(var(--burger-height) + var(--burger-gutter));
+    margin-bottom: calc(var(--burger-height) + var(--burger-gutter));
+    user-select: none;
+
+    &, &:before, &:after {
+      display: inline-block;
+      width: var(--burger-width);
+      height: var(--burger-height);
+      transform: translate3d(0,0,0) rotate(0deg);
+      transform-origin: 50% 50%;
+      text-align: left;
+      outline: 1px solid transparent;
+      background-color: currentColor;
+      transition: background-color var(--trans), transform var(--trans), width var(--trans), height var(--trans);
+    }
+    
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+    }
+
+    &:before {
+      transform: translate3d(0, calc( calc( var(--burger-height) + var(--burger-gutter) ) * -1 ), 0) rotate(0deg);
+    }
+
+    &:after {
+      transform: translate3d(0, calc(var(--burger-height) + var(--burger-gutter)), 0) rotate(0deg);
+    }
+
+    @nest .Header.is-open & {
+
+      &, &:before, &:after {
+      }
+
+      & {
+        background-color: transparent;
+        transform: translate3d(0,0,0) rotate(0deg);
+      }
+
+      &:before {
+        transform: translate3d(0,0,0) rotate(45deg);
+      }
+
+      &:after {
+        transform: translate3d(0,0,0) rotate(-45deg);
+      }
     }
   }
 
@@ -98,6 +173,7 @@ export default {
   }
 
   &__list {
+    text-align: left;
     margin-bottom: 0;
     padding: var(--bsu-lg);
     font-weight: 300;

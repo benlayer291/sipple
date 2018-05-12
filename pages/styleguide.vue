@@ -22,10 +22,6 @@
 
       <hr>
 
-      <a href="#" class="t-link">this is a link</a>
-
-      <hr>
-
       <span class="u-logo-diamond">
         <!-- <SvgIcon title="Logo" file="logo-mask2" /> -->
       </span>

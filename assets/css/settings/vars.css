@@ -61,6 +61,12 @@
   --z3: 30;
   --z4: 40;
   --z5: 50;
+
+  /* UI */
+
+--burger-height: 2px;
+--burger-width:  40px;
+--burger-gutter: 10px;
 }
 
 /**
