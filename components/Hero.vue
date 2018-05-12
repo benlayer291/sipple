@@ -10,7 +10,7 @@ export default {
     pBackgroundColor: {
       type: String,
       required: true,
-      default: '#ffffff',
+      default: '#503bd2',
     },
     pBackgroundImage: {
       type: String,
@@ -34,10 +34,13 @@ export default {
 </script>
 
 <style lang="postcss">
+@import "../assets/css/settings/vars";
+
 .Hero {
-  height: 100px;
   width: 100%;
+  height: 100vh;
   margin-bottom: 20px;
+  color: var(--white);
 }
 </style>
 

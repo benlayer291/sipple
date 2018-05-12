@@ -1,0 +1,30 @@
+/* ------------------------------------ *\
+  #Page
+\* ------------------------------------ */
+
+/**
+ * Page-level styling (e.g. HTML and BODY elements).
+ */
+
+html {
+  min-height: 100%;
+  font-size: 1em;
+  color: var(--main-page-color);
+  background: var(--main-page-bg);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--main-page-font);
+  font-weight: normal;
+}
+
+::selection {
+  color: var(--main-page-color-selection);
+  background: var(--main-page-bg-selection);
+}

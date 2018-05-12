@@ -47,7 +47,6 @@ export default {
 
 <style lang="postcss">
 .Split {
-  height: 100px;
   width: 100%;
   margin-bottom: 20px;
 }

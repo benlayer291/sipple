@@ -1,0 +1,43 @@
+/*------------------------------------*\
+  #Buttons
+\*------------------------------------*/
+
+/**
+ * Button.
+ */
+
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 200px;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: calc(18 / 10);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  text-indent: .4em;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: var(--black);
+  transition: var(--trans);
+
+  &:matches(:focus, :hover) {
+    color: var(--black);
+    background-color: var(--blue);
+  }
+
+  &:active {
+    color: var(--black);
+    background-color: var(--white);
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    cursor: default;
+    opacity: .2;
+    pointer-events: none;
+  }
+}

@@ -29,7 +29,7 @@ module.exports = {
   css: [
     // CSS file in the project
     { 
-      src: '@/assets/css/main.css', 
+      src: '@/assets/css/base.css', 
       lang: 'postcss'
     }
   ],

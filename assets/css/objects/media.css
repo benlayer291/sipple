@@ -1,0 +1,46 @@
+/*------------------------------------*\
+  #Media
+\*------------------------------------*/
+
+/**
+ * media.
+ */
+
+.media {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: 0;
+  height: auto;
+  background-color: color(var(--white) a(5%));
+  overflow: hidden;
+
+  &__item,
+  & iframe,
+  & object,
+  & embed,
+  & video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+
+  &--16\:9 {
+    padding-bottom: calc(9 / 16 * 100%);
+  }
+
+  &--2\:3 {
+    padding-bottom: calc(3 / 2 * 100%);
+  }
+}

@@ -1,0 +1,145 @@
+/*------------------------------------*\
+  #Typography
+\*------------------------------------*/
+
+/**
+ * Fonts.
+ */
+
+@font-face {
+  font-family: "Faro";
+  src: url("/fonts/faro-lightlucky.woff2") format("woff2"),
+       url("/fonts/faro-lightlucky.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Faro";
+  src: url("/fonts/faro-regularlucky.woff2") format("woff2"),
+       url("/fonts/faro-regularlucky.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plaak";
+  src: url("/fonts/plaak-bold.woff2") format("woff2"),
+       url("/fonts/plaak-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/**
+ * Headings.
+ */
+
+h1, .t-h1,
+h2, .t-h2,
+h3, .t-h3,
+h4, .t-h4,
+h5, .t-h5,
+h6, .t-h6 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+h1, .t-h1 {
+  font-family: var(--font-slab);
+  font-size: 180px;
+  line-height: calc(153/180);
+  letter-spacing: .005em;
+}
+
+h2, .t-h2 {
+}
+
+h3, .t-h3 {
+}
+
+h4, .t-h4 {
+}
+
+h5, .t-h5 {
+}
+
+h6, .t-h6 {
+}
+
+/**
+ * Paragraphs.
+ */
+
+p,
+address,
+.t-para {
+  font-size: 20px;
+  line-height: calc(26/20);
+  letter-spacing: .02em;
+  font-weight: 300;
+
+  & a {
+    color: var(--blue);
+    transition: color var(--trans);
+
+    &:hover {
+      color: var(--blue-light);
+    }
+  }
+}
+
+.t-lede {
+  font-size: 30px;
+  line-height: calc(36/30);
+  letter-spacing: .02em;
+  font-weight: 300;
+}
+
+/**
+ * Prose.
+ */
+
+address,
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: 70%;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: normal;
+}
+
+sup {
+  top: -.4em;
+  font-size: 60%;
+}
+
+sub {
+  bottom: 0;
+  font-size: 60%;
+}
+
+/**
+ * Quote styling.
+ */
+
+q {
+  font-style: italic;
+  quotes: "‘" "’";
+
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
