@@ -27,11 +27,11 @@
       <hr>
 
       <span class="u-logo-diamond">
-        <SvgIcon title="Logo" file="logo-mask2" />
+        <!-- <SvgIcon title="Logo" file="logo-mask2" /> -->
       </span>
 
       <span class="u-logo-Copy">
-        <SvgIcon title="Logo" file="logo-Copy" />
+        <!-- <SvgIcon title="Logo" file="logo-Copy" /> -->
       </span>
 
     </section>
@@ -41,7 +41,7 @@
 
     <!-- Hero -->
     <Hero 
-      p-text="<h1>This is a Hero component</h1>"
+      p-text="<h1 class='t-lede'>The smarter way to hydrate on-the-go without the plastic waste</h1>"
     />
 
     <!-- Full -->

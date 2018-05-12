@@ -11,27 +11,28 @@
   z-index: 1;
   display: inline-block;
   vertical-align: middle;
-  min-width: 200px;
-  font-size: 10px;
+  min-width: 300px;
+  font-size: 15px;
+  line-height: calc(20/15);
   font-weight: normal;
-  line-height: calc(18 / 10);
+  letter-spacing: .15em;
+  text-indent: .15em;
+  padding: 1.3em;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .4em;
-  text-indent: .4em;
   white-space: nowrap;
   cursor: pointer;
-  background-color: var(--black);
+  background-color: var(--white);
+  border: thin solid var(--blue);
   transition: var(--trans);
 
   &:matches(:focus, :hover) {
-    color: var(--black);
+    color: var(--white);
     background-color: var(--blue);
   }
 
   &:active {
-    color: var(--black);
-    background-color: var(--white);
+    background-color: color(var(--blue) shade(15%) );
   }
 
   &:disabled,

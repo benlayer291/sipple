@@ -22,9 +22,20 @@ html {
 body {
   font-family: var(--main-page-font);
   font-weight: normal;
+  background-color: var(--main-page-bg);
 }
 
 ::selection {
   color: var(--main-page-color-selection);
   background: var(--main-page-bg-selection);
+}
+
+.Main {
+  transform: translateX(0%) translateZ(0);
+  backface-visibility: hidden;
+  transition: transform var(--trans);
+
+  .Header.is-open + & {
+    transform: translateX(50%) translateZ(0);
+  }
 }

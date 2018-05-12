@@ -9,7 +9,7 @@ export default {
   props: {
     pBackgroundColor: {
       type: String,
-      required: true,
+      required: false,
       default: '#503bd2',
     },
     pBackgroundImage: {
@@ -37,10 +37,17 @@ export default {
 @import "../assets/css/settings/vars";
 
 .Hero {
+  display: flex;
   width: 100%;
   height: 100vh;
-  margin-bottom: 20px;
+  padding: var(--bsu-lg);
   color: var(--white);
+
+  &__text {
+    max-width: 34em;
+    margin: auto;
+    text-align: center;
+  }
 }
 </style>
 
