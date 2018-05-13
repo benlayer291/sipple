@@ -56,9 +56,13 @@ h1, .t-h1 {
 
 h2, .t-h2 {
   font-family: var(--font-slab);
-  font-size: 70px;
+  font-size: 24px;
    line-height: calc(153/180);
   letter-spacing: .005em;
+
+  @media(--sm) {
+    font-size: 70px;
+  }
 }
 
 h3, .t-h3 {

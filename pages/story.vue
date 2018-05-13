@@ -29,18 +29,50 @@
       "
       :p-reverse="false"
     />
+    
+    <!-- Full -->
+    <Full 
+      p-background-color="#E6E6E6"
+      p-text="
+        <p class='t-lede'>An oil-chugging global monster was born. And the rest, as they say, is history. Billions of plastic bottles spewed into the oceans and landfills, microplastics in our food and an island of trash three times the size of France floating in the Pacific.</p>
+      "
+    />
+
+    <Full 
+      p-image="mission1.jpg"
+    />
+
+    <Full 
+      p-image="story2.jpg"
+    />
+
+    <!-- Full -->
+    <Full 
+      p-background-color="#E6E6E6"
+      p-text="
+        <h3>Introducing Sipple</h3>
+        <p>Sipple Hydration Stations are a sustainable way to drink fresh, filtered water while you’re out and about. Our system doesn’t create waste and it doesn’t harm the planet.</p>
+        <p>We’re starting a movement on the shared belief that a cleaner tomorrow is urgent. No guilt trips, just the right tools to make a difference.</p>
+        <p>Disposable packaging is killing the planet. But it doesn’t have to.</p>
+      "
+      :p-cta="{ text: 'Our solution', theme: 'white', link: 'https://vuejs.org/' }"
+    />
 
   </main>
 </template>
 
 <script>
 import Hero from '@/components/Hero'
+import Full from '@/components/Full'
 import Split from '@/components/Split'
+import Signoff from '@/components/Signoff'
 
 export default {
   components: {
     Hero,
+    Full,
     Split,
-  },
+    Signoff,
+  }
 }
 </script>

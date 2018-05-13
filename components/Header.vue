@@ -89,15 +89,17 @@ export default {
 
   &__switch {
     position: absolute;
-    top: var(--bsu-sm);
+    top: 0;
     left: 0;
-    padding: var(--bsu-lg);
+    padding: var(--bsu);
     z-index: var(--z2);
     color: var(--white);
     font-size: 20px;
 
     @media(--sm) {
+      top: var(--bsu-sm);
       font-size: 40px;
+      padding: var(--bsu-lg);
     }
 
     .Header.is-open & {
@@ -122,9 +124,16 @@ export default {
     position: relative;
     display: inline-block;
     color: var(--white);
-    margin: 15px auto 0;
     padding: var(--bsu);
     overflow: hidden;
+
+    font-size: 91px;
+    line-height: 0;
+
+    @media(--sm) {
+      margin-top: 28px;
+      font-size: 182px;
+    }
   }
 
   &__logo {
@@ -137,8 +146,8 @@ export default {
       transform var(--trans);
 
     .i-logo {
-      width: 182px;
-      height: 70px;
+      width: 1em;
+      height: .384615385em;
     }
 
     .Header.is-scrolled & {
@@ -149,8 +158,8 @@ export default {
 
   &__logoWave {
     position: absolute;
-    top: -.55em;
-    left: -.1em;
+    top: -.05em;
+    left: -.0em;
     width: 100%;
     height: 100%;
     display: flex;
@@ -164,8 +173,8 @@ export default {
       transform var(--trans);
 
     .i-logo-wave {
-      width: 45px;
-      height: 12px;
+      width: .24em;
+      height: .1em;
     }
 
     .Header.is-scrolled & {

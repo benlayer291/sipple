@@ -105,8 +105,12 @@ export default {
   }
 
   &__content {
-    padding: 20% 10%;
+    padding: 10%;
     text-align: center;
+
+    @media(--sm) {
+      padding: 20% 10%;
+    }
 
     & p {
       max-width: 15.5em;
