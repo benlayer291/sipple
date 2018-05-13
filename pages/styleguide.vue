@@ -34,7 +34,7 @@
       p-color="#fff"
       p-image="3.jpg"
       p-background-color="#53565a"
-      :p-cta="{ text: 'Contact', theme: '', link: 'https://vuejs.org/' }"
+      :p-cta="{ text: 'Contact', theme: 'white', link: 'https://vuejs.org/' }"
       p-text="
         <h3>Say Hello</h3>
         <p>Drop us a line to find out where to find us.</p>
@@ -78,7 +78,7 @@
     <!-- Signoff -->
     <Signoff 
       p-background-color="#ccc"
-      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
+      :p-cta="{ text: 'Button', theme: 'white', link: 'https://vuejs.org/' }"
       p-image=""
       p-text=""
       p-title=""

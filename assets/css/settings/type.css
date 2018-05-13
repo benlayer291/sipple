@@ -90,13 +90,13 @@ address,
   font-weight: 300;
 
   & a {
-    color: var(--blue);
     background-image: url(/imgs/sipple-underline.svg);
     background-position: 0 100%;
     background-size: .8em .2em;
     background-repeat: repeat-x;
     animation: shakeDatAss 5s linear infinite;
     animation-play-state: paused;
+    padding-bottom: 2px;
     transition: color var(--trans);
 
     &:hover {

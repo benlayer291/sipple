@@ -26,7 +26,10 @@
   color: var(--grey1);
   background-color: var(--white);
   border: thin solid var(--blue);
-  transition: var(--trans);
+  transition: 
+    color var(--trans),
+    background-color var(--trans),
+    border var(--trans);
 
   &:matches(:focus, :hover) {
     color: var(--white);
