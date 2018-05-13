@@ -55,7 +55,19 @@
     />
 
     <!-- Full -->
-    <Full />
+    <Full 
+      p-background-color="#ccc"
+      p-background-image=""
+      :p-center="false"
+      p-color="#000000"
+      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
+      p-text="
+        <h3>Better than recycling</h3>
+        <p>What’s better than recycling? Having nothing to recycle.</p>
+        <p>Our water refills use zero packaging which means zero waste to dispose of</p>
+      "
+      :p-reverse="false"
+    />
 
     <!-- Signoff -->
     <Signoff />
