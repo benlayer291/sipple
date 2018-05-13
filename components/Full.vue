@@ -80,9 +80,14 @@ export default {
       padding: 20% var(--bsu-lg);
     }
     
-
     & p {
-      max-width: 20em;
+      max-width: 22em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    & p.t-lede {
+      max-width: 24.5em;
       margin-left: auto;
       margin-right: auto;
     }

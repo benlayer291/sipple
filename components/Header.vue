@@ -20,7 +20,7 @@
       <div class="Header__scroll">
         <ul class="Header__list  t-lede">
           <li class="Header__item">
-            <nuxt-link to="/" class="Header__link">Our story</nuxt-link>
+            <nuxt-link to="/story" class="Header__link">Our story</nuxt-link>
           </li>
           <li class="Header__item">
             <nuxt-link to="/problem" class="Header__link">The problem</nuxt-link>
