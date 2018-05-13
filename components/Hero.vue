@@ -28,13 +28,22 @@ export default {
   },
   data() {
     return {
-      backgroundStyle: {
-        backgroundColor: this.pBackgroundColor,
-        backgroundImage: this.pBackgroundImage,
-      },
       text: this.pText,
     }
   },
+  computed: {
+    backgroundStyle() {
+      const style = {}
+      
+      style.backgroundColor = this.pBackgroundColor
+
+      if (this.pBackgroundImage) {
+        style.backgroundImage = this.pBackgroundImage
+      }
+
+      return style
+    }
+  }
 }
 </script>
 
@@ -51,11 +60,13 @@ export default {
   color: var(--white);
 
   &__text {
-    margin: auto;
     text-align: center;
+    margin: auto;
 
-    & h1 {
+    & h1, p {
       max-width: 20em;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }
