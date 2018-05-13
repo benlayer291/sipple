@@ -3,7 +3,7 @@
     
     <img v-if="image" :src="`/imgs/${image}`" alt="Sipple">
     
-    <div v-if="text" class="Signoff__content" :style="`color: ${color}`">
+    <div v-if="text" class="Signoff__content">
       <div class="Signoff__text" v-html="text"></div>
       <a v-if="cta" :href="cta.link" class="Signoff__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
     </div>
