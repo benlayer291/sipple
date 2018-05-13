@@ -124,8 +124,11 @@ export default {
   &__logo {
     display: block;
     opacity: 1;
-    transform: scale(1);
-    transition: var(--trans);
+    transform: scale(1) translateZ(0);
+    backface-visibility: hidden;
+    transition: 
+      opacity var(--trans),
+      transform var(--trans);
 
     .i-logo {
       width: 182px;
@@ -134,7 +137,7 @@ export default {
 
     .Header.is-scrolled & {
       opacity: 0;
-      transform: scale(0);
+      transform: scale(0) translateZ(0);
     }
   }
 
@@ -148,8 +151,11 @@ export default {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transform: scale(4.5);
-    transition: var(--trans);
+    transform: scale(4.5) translateZ(0);
+    backface-visibility: hidden;
+    transition: 
+      opacity var(--trans),
+      transform var(--trans);
 
     .i-logo-wave {
       width: 45px;
@@ -158,7 +164,7 @@ export default {
 
     .Header.is-scrolled & {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1) translateZ(0);
     }
   }
 
@@ -255,12 +261,13 @@ export default {
     opacity: 0;
     visibility: hidden;
     transform: translateX(-10px) translateZ(0);
+    backface-visibility: hidden;
     transition: 
       opacity var(--trans),
       visibility var(--trans),
       transform var(--trans) .25s;
 
-    @nest .Header.is-open & {
+    .Header.is-open & {
       opacity: 1;
       visibility: visible;
       transform: translateX(0) translateZ(0);

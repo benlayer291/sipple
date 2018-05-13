@@ -30,10 +30,10 @@
           <p class="t-small">We promise not to spam you or share your data. That’s not our style.</p>
           <form class="Footer__form  t-small" action="">
             <div class="Footer__field">
-              <input class="Footer__input" type="text" placeholder="Name">
+              <input class="Footer__input" type="text" placeholder="Name" autocorrect="off" spellcheck="false" required>
             </div>
             <div class="Footer__field">
-              <input class="Footer__input" type="email" placeholder="Email">
+              <input class="Footer__input" type="email" placeholder="Email" autocorrect="off" spellcheck="false" required>
             </div>
             <button class="Footer__button  button  button--ghost" type="submit">Sign me up</button>
           </form>
@@ -47,6 +47,7 @@
             London SW8 5EE, United Kingdom<br>
             +44 (0)203 948 6786
           </address>
+          <p class="t-small"><a href="mailto:hello@sipplehydration.com">hello@sipplehydration.com</a></p>
         </div>
       </div>
 
@@ -81,22 +82,31 @@ export default {
   }
 
   &__social {
-    margin-left: -5px;
 
     & li {
       display: inline-block;
+      margin-right: 10px;
     }
 
     & a {
       display: block;
-      padding: 5px;
+      border: thin solid currentColor;
+      border-radius: 50%;
+      transition: 
+        color var(--trans),
+        border var(--trans),
+        background-color var(--trans);
+
+      &:hover {
+        color: var(--blue);
+        border-color: var(--white);
+        background-color: var(--white);
+      }
     }
 
     & .i-social {
       width: 32px;
       height: 32px;
-      border: thin solid currentColor;
-      border-radius: 50%;
     }
   }
 
@@ -106,6 +116,15 @@ export default {
     padding: 5px 0;
     border-bottom: thin solid var(--turquoise);
     margin-bottom: var(--bsu);
+    transition: border var(--trans);
+
+    &:hover {
+      border-color: color(var(--turquoise) a(50%));
+    }
+
+    &:focus {
+      border-color: var(--turquoise);
+    }
 
     &::placeholder {
       color: var(--white);
