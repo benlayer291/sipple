@@ -27,7 +27,14 @@
     </section>
 
     <!-- Feature -->
-    <Feature />
+    <Feature 
+      p-background-color="#ccc"
+      p-image=""
+      p-intro=""
+      :p-reverse="false"
+      p-text=""
+      p-title=""
+    />
 
     <!-- Hero -->
     <Hero 

@@ -8,7 +8,6 @@
 import SvgIcon from '@/components/SvgIcon'
 
 export default {
-
   components: {
     SvgIcon
   },
