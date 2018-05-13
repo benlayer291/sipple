@@ -2,8 +2,10 @@
   <header class="Header" :class="{ 'is-open': menuOpen, 'is-scrolled': hasScrolled }">
 
     <div class="Header__bar">
-      <nuxt-link to="/" class="Header__logo">
-        <SvgIcon className="i-logo" title="Sipple Logo" file="logo" />
+      <nuxt-link to="/" class="Header__logos">
+        <span class="Header__logo">
+          <SvgIcon className="i-logo" title="Sipple Logo" file="logo" />
+        </span>
         <span class="Header__logoWave">
           <SvgIcon className="i-logo-wave" title="Sipple Wave Logo" file="logo-wave" />
         </span>
@@ -61,7 +63,7 @@ export default {
   },
   mounted () {
     this.$bus.$on('scroll', () => {
-      if ((window.scrollY > 1) !== this.hasScrolled) this.scroller(!this.hasScrolled)
+      if ((window.scrollY > 50) !== this.hasScrolled) this.scroller(!this.hasScrolled)
     })
   },
   methods: {
@@ -111,16 +113,23 @@ export default {
     }
   }
 
-  &__logo {
+  &__logos {
     position: relative;
     display: inline-block;
     color: var(--white);
     margin: 30px auto 0;
     padding: var(--bsu);
+  }
+
+  &__logo {
 
     .i-logo {
       width: 182px;
       height: 70px;
+    }
+
+    .Header.is-scrolled & {
+      opacity: 0;
     }
   }
 
@@ -133,11 +142,15 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    opacity: 0;
 
     .i-logo-wave {
       width: 91px;
       height: 25px;
+    }
+
+    .Header.is-scrolled & {
+      opacity: 1;
     }
   }
 

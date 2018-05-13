@@ -2,11 +2,11 @@
   <section class="Split" :class="{'is-reverse': reverse}" :style="backgroundStyle">
     <div class="grid">
       <div class="grid__item  u-1/2@sm">
-        <div class="Hero__text" v-html="text"></div>
-        <a :href="cta.link" class="Hero__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
+        <div class="media media--square"></div>
       </div>
       <div class="grid__item  u-1/2@sm">
-        <div class="media media--square"></div>
+        <div class="Hero__text" v-html="text"></div>
+        <a :href="cta.link" class="Hero__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
       </div>
     </div>
   
