@@ -1,0 +1,25 @@
+/*------------------------------------*\
+  #Wrappers
+\*------------------------------------*/
+
+.wrapper {
+  max-width: var(--bmw);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
+
+  @media (--sm) {
+    padding-right: calc((1 / 12 * 100%) + 20px);
+    padding-left: calc((1 / 12 * 100%) + 20px);
+  }
+
+  @media (--bmw) {
+    padding-right: 140px;
+    padding-left: 140px;
+  }
+
+  &--noMaxWidth {
+    max-width: none;
+  }
+}

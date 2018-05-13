@@ -1,17 +1,22 @@
 <template>
   <div>
+    <Svgs />
     <Header />
-    <nuxt/>
+    <div class="Main">
+      <nuxt/>
+    </div>
     <Footer />
   </div>
 </template>
 
 <script>
+import Svgs from '@/components/Svgs'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default {
   components: {
+    Svgs,
     Header,
     Footer,
   },

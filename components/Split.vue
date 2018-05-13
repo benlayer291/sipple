@@ -1,7 +1,7 @@
 <template>
   <section class="Split" :class="{'is-reverse': reverse}" :style="backgroundStyle">
     <div class="Hero__text" v-html="text"></div>
-    <a :href="cta.link" :class="'button--' + cta.theme">{{ cta.text }}</a>
+    <a :href="cta.link" class="Hero__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
   </section>
 </template>
 
@@ -47,7 +47,6 @@ export default {
 
 <style lang="postcss">
 .Split {
-  height: 100px;
   width: 100%;
   margin-bottom: 20px;
 }
