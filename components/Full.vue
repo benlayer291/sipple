@@ -1,10 +1,12 @@
 <template>
   <section class="Full" :style="backgroundStyle">
     
-    <div class="Full__content" :style="`color: ${color}`">
+    <div v-if="text" class="Full__content" :style="`color: ${color}`">
       <div class="Full__text" v-html="text"></div>
-      <a :href="cta.link" class="Full__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
+      <a v-if="cta" :href="cta.link" class="Full__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
     </div>
+    
+    <img v-if="image" :src="`/imgs/${image}`" alt="Sipple">
       
   </section>
 </template>
@@ -14,7 +16,7 @@ export default {
  props: {
    pBackgroundColor: {
       type: String,
-      required: true,
+      required: false,
       default: '#ffffff',
     },
     pBackgroundImage: {
@@ -32,10 +34,15 @@ export default {
     pText: {
       type: String,
       required: false,
+    },
+    pImage: {
+      type: String,
+      required: false,
     }
   },
   data() {
     return {
+      image: this.pImage,
       color: this.pColor,
       backgroundStyle: {
         backgroundColor: this.pBackgroundColor,
@@ -56,16 +63,23 @@ export default {
   flex-flow: column nowrap;
   justify-content: center;
   width: 100%;
-  padding: 20% 10%;
-  color: var(--white);
   text-align: center;
 
   @media(--sm) {
-    min-height: 90vh;
-    padding: var(--bsu-lg);
+    
+  }
+
+  & img {
+    width: 100%;
   }
 
   &__content {
+    padding: 10%;
+
+    @media(--sm) {
+      padding: 20% var(--bsu-lg);
+    }
+    
 
     & p {
       max-width: 20em;
