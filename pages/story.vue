@@ -1,13 +1,15 @@
 <template>
   <main>
+  
     <!-- Hero -->
     <Hero 
-      p-text="<h1 class='t-lede'>The future’s not disposable.</h1>"
+      p-text="<h1 class='t-lede'>The future's not disposable</h1>"
     />
 
     <!-- Split -->
     <Split
-      p-image="story1.jpg"
+      p-image="6.jpg"
+      p-color="#53565a"
       p-background-color="#fff"
       p-text="
         <p>Forty years ago, plastic was a new wonder material. Lightweight, durable and cheap. We all got so excited we threw parties about tupperware.</p>
@@ -16,6 +18,18 @@
       :p-reverse="true"
     />
 
+    <!-- Split -->
+    <Split
+      p-image="7.jpg"
+      p-color="#53565a"
+      p-background-color="#fff"
+      p-text="
+        <p>Today there's a stirring around disposable plastics. Their impact is under scrutiny. It's being discussed on TV, in the news and in government. Uncomfortable questions are being asked. People haven't been given much choice.</p>
+        <p>Until now.</p>
+      "
+      :p-reverse="false"
+    />
+    
     <!-- Full -->
     <Full 
       p-background-color="#E6E6E6"
@@ -32,17 +46,6 @@
       p-image="story2.jpg"
     />
 
-    <!-- Split -->
-    <Split
-      p-image="story3.jpg"
-      p-background-color="#fff"
-      p-text="
-        <p>Today, there’s a stirring around disposable plastics. Their impact is under scrutiny. It’s being discussed on TV, in the news and in government. Uncomfortable questions are being asked. People haven’t been given much choice.</p>
-        <p>Until now.</p>
-      "
-      :p-reverse="false"
-    />
-
     <!-- Full -->
     <Full 
       p-background-color="#E6E6E6"
@@ -53,7 +56,6 @@
         <p>Disposable packaging is killing the planet. But it doesn’t have to.</p>
       "
       :p-cta="{ text: 'Our solution', theme: 'white', link: 'https://vuejs.org/' }"
-
     />
 
   </main>

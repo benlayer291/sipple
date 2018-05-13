@@ -51,16 +51,25 @@ export default {
   data() {
     return {
       color: this.pColor,
-      backgroundStyle: {
-        backgroundColor: this.pBackgroundColor,
-        backgroundImage: this.pBackgroundImage,
-      },
       image: this.pImage,
       cta: this.pCta,
       reverse: this.pReverse,
       text: this.pText,
     }
   },
+  computed: {
+    backgroundStyle() {
+      const style = {}
+
+      style.backgroundColor = this.pBackgroundColor
+
+      if (this.pBackgroundImage) {
+        style.backgroundImage = this.pBackgroundImage
+      }
+
+      return style
+    }
+  }
 }
 </script>
 
@@ -75,7 +84,11 @@ export default {
       align-self: center;
 
       .Split.is-reverse & {
-        order: 1;
+        order: 0;
+
+        @media(--sm) {
+          order: 1;
+        }
       }
     }
 
@@ -84,6 +97,10 @@ export default {
       background-position: center;
       background-size: cover;
       margin-bottom: 0;
+
+      @media(--sm) {
+        min-height: 600px;
+      }
     }
   }
 

@@ -1,5 +1,6 @@
 <template>
   <main>
+
     <!-- Hero -->
     <Hero 
       p-text="<h1 class='t-lede'>Sipple was founded to combat the environmental damage caused by the bottled water industry.</h1>"
@@ -42,7 +43,7 @@
         <p>10% of our profits go to the Sipple One World Foundation, which is used to support our environmental partners to keep the planet healthy and awesome.</p>
       "
     />
-
+  
   </main>
 </template>
 
