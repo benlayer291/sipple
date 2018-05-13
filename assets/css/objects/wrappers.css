@@ -6,17 +6,12 @@
   max-width: var(--bmw);
   margin-right: auto;
   margin-left: auto;
-  padding-right: var(--gutter);
-  padding-left: var(--gutter);
+  padding-right: var(--bsu-lg);
+  padding-left: var(--bsu-lg);
 
   @media (--sm) {
-    padding-right: calc((1 / 12 * 100%) + 20px);
-    padding-left: calc((1 / 12 * 100%) + 20px);
-  }
-
-  @media (--bmw) {
-    padding-right: 140px;
-    padding-left: 140px;
+    padding-right: var(--bsu-xl);
+    padding-left: var(--bsu-xl);
   }
 
   &--noMaxWidth {

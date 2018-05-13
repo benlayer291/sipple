@@ -24,7 +24,7 @@
       p-background-color="#fff"
       :p-cta="{ text: 'Find Out More', theme: '', link: 'https://vuejs.org/' }"
       p-text="
-        <h3>Our technology</h3>
+        <h3>Our solution</h3>
         <p>How do Sipple Hydration Stations work?</p>
       "
       :p-reverse="false"
@@ -42,11 +42,22 @@
       :p-reverse="false"
     />
 
+    <Split
+      p-image="4.jpg"
+      p-background-color="#fff"
+      p-text="
+        <h3>What’s better than recycling?</h3>
+        <p>Having nothing to recycle.</p>
+        <p>Our water refills use zero packaging which means zero waste to dispose of.</p>
+      "
+      :p-reverse="true"
+    />
+
     <!-- Full -->
     <Full 
       p-background-color="#53565a"
       p-color="white"
-      :p-cta="{ text: 'Our Story', theme: 'white', link: 'https://vuejs.org/' }"
+      :p-cta="{ text: 'The problem', theme: 'white', link: 'https://vuejs.org/' }"
       p-text="
         <h1>Plastic ain’t fantastic</h1>
         <p>Single-use plastic bottles suck.<br>They trash our planet and that’s not okay.</p>

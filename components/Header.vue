@@ -94,6 +94,11 @@ export default {
     padding: var(--bsu-lg);
     z-index: var(--z2);
     color: var(--white);
+    font-size: 20px;
+
+    @media(--sm) {
+      font-size: 40px;
+    }
 
     .Header.is-open & {
       color: var(--grey1);
@@ -119,6 +124,7 @@ export default {
     color: var(--white);
     margin: 15px auto 0;
     padding: var(--bsu);
+    overflow: hidden;
   }
 
   &__logo {
