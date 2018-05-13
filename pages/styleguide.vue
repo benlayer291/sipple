@@ -27,7 +27,14 @@
     </section>
 
     <!-- Feature -->
-    <Feature />
+    <Feature 
+      p-background-color="#ccc"
+      p-image=""
+      p-intro=""
+      :p-reverse="false"
+      p-text=""
+      p-title=""
+    />
 
     <!-- Hero -->
     <Hero 
@@ -48,15 +55,36 @@
     />
 
     <!-- Full -->
-    <Full />
+    <Full 
+      p-background-color="#ccc"
+      p-background-image=""
+      :p-center="false"
+      p-color="#000000"
+      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
+      p-text="
+        <h3>Better than recycling</h3>
+        <p>What’s better than recycling? Having nothing to recycle.</p>
+        <p>Our water refills use zero packaging which means zero waste to dispose of</p>
+      "
+      :p-reverse="false"
+    />
 
     <!-- Signoff -->
-    <Signoff />
-
-    
+    <Signoff 
+      p-background-color="#ccc"
+      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
+      p-image=""
+      p-text=""
+      p-title=""
+    />
 
     <!-- Testimonial -->
-    <Testimonial />
+    <Testimonial 
+      p-author=""
+      p-background-color="#ccc"
+      p-image=""
+      p-quote=""
+    />
 
   </main>
 </template>
