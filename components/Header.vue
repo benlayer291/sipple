@@ -89,15 +89,17 @@ export default {
 
   &__switch {
     position: absolute;
-    top: var(--bsu-sm);
+    top: 0;
     left: 0;
-    padding: var(--bsu-lg);
+    padding: var(--bsu);
     z-index: var(--z2);
     color: var(--white);
     font-size: 20px;
 
     @media(--sm) {
+      top: var(--bsu-sm);
       font-size: 40px;
+      padding: var(--bsu-lg);
     }
 
     .Header.is-open & {
@@ -122,7 +124,6 @@ export default {
     position: relative;
     display: inline-block;
     color: var(--white);
-    margin: 28px auto 0;
     padding: var(--bsu);
     overflow: hidden;
 
@@ -130,6 +131,7 @@ export default {
     line-height: 0;
 
     @media(--sm) {
+      margin-top: 28px;
       font-size: 182px;
     }
   }
