@@ -5,7 +5,13 @@
 </template>
 
 <script>
+import SvgIcon from '@/components/SvgIcon'
+
 export default {
+
+  components: {
+    SvgIcon
+  },
   props: {
     pBackgroundColor: {
       type: String,
@@ -38,6 +44,8 @@ export default {
 
 .Hero {
   display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   width: 100%;
   height: 100vh;
   padding: var(--bsu-lg);

@@ -22,13 +22,7 @@
 
       <hr>
 
-      <span class="u-logo-diamond">
-        <!-- <SvgIcon title="Logo" file="logo-mask2" /> -->
-      </span>
-
-      <span class="u-logo-Copy">
-        <!-- <SvgIcon title="Logo" file="logo-Copy" /> -->
-      </span>
+      <SvgIcon title="Logo" file="logo" />
 
     </section>
 
@@ -62,6 +56,7 @@
 </template>
 
 <script>
+import SvgIcon from '@/components/SvgIcon'
 import Feature from '@/components/Feature'
 import Full from '@/components/Full'
 import Hero from '@/components/Hero'
@@ -71,6 +66,7 @@ import Testimonial from '@/components/Testimonial'
 
 export default {
   components: {
+    SvgIcon,
     Feature,
     Full,
     Hero,

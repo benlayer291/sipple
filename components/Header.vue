@@ -1,11 +1,16 @@
 <template>
-  <header class="Header" :class="{ 'is-open': isOpen }">
+  <header class="Header" :class="{ 'is-open': menuOpen, 'is-scrolled': hasScrolled }">
 
-    <nuxt-link to="/" class="Header__logo">
-      <SvgIcon title="Logo" file="logo" />
-    </nuxt-link>
+    <div class="Header__bar">
+      <nuxt-link to="/" class="Header__logo">
+        <SvgIcon className="i-logo" title="Sipple Logo" file="logo" />
+        <span class="Header__logoWave">
+          <SvgIcon className="i-logo-wave" title="Sipple Wave Logo" file="logo-wave" />
+        </span>
+      </nuxt-link>
+    </div>
 
-    <button class="Header__switch" type="button" @click="toggleNav">
+    <button class="Header__switch" type="button" @click="toggleMenu">
       <span class="Header__burger"></span>
     </button>
 
@@ -50,13 +55,22 @@ export default {
   },
   data() {
     return {
-      isOpen: false
+      menuOpen: false,
+      hasScrolled: false
     }
   },
+  mounted () {
+    this.$bus.$on('scroll', () => {
+      if ((window.scrollY > 1) !== this.hasScrolled) this.scroller(!this.hasScrolled)
+    })
+  },
   methods: {
-    toggleNav() {
-      this.isOpen = !this.isOpen
-    }
+    scroller (val) {
+      this.hasScrolled = val
+    },
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen
+    },
   }
 }
 </script>
@@ -70,11 +84,10 @@ export default {
   left: 0;
   width: 100%;
   z-index: var(--z1);
-  text-align: center;
 
   &__switch {
     position: absolute;
-    top: 0;
+    top: var(--bsu-sm);
     left: 0;
     padding: var(--bsu-lg);
     z-index: var(--z2);
@@ -85,15 +98,46 @@ export default {
     }
   }
 
+  &__bar {
+    display: block;
+    width: 100%;
+    text-align: center;
+    transform: translateX(0%) translateZ(0);
+    backface-visibility: hidden;
+    transition: transform var(--trans);
+
+    .Header.is-open & {
+      transform: translateX(50%) translateZ(0);
+    }
+  }
+
   &__logo {
+    position: relative;
     display: inline-block;
     color: var(--white);
-    margin: 0 auto;
-    padding: 50px;
+    margin: 30px auto 0;
+    padding: var(--bsu);
 
-    svg {
-      width: 180px;
-      height: 68px;
+    .i-logo {
+      width: 182px;
+      height: 70px;
+    }
+  }
+
+  &__logoWave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .i-logo-wave {
+      width: 91px;
+      height: 25px;
     }
   }
 
@@ -112,7 +156,9 @@ export default {
       text-align: left;
       outline: 1px solid transparent;
       background-color: currentColor;
-      transition: background-color var(--trans), transform var(--trans), width var(--trans), height var(--trans);
+      transition: 
+        background-color var(--trans), 
+        transform var(--trans);
     }
     
     &:before, &:after {
@@ -173,7 +219,6 @@ export default {
   }
 
   &__list {
-    text-align: left;
     margin-bottom: 0;
     padding: var(--bsu-lg);
     font-weight: 300;

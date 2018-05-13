@@ -20,6 +20,11 @@ export default {
     Header,
     Footer,
   },
+  mounted () {
+    window.addEventListener('scroll', (e) => {
+      this.$bus.$emit('scroll', window.scrollY)
+    })
+  }
 }
 </script>
 
