@@ -1,5 +1,97 @@
 <template>
   <main>
+
+    <!-- Hero -->
+    <Hero 
+      p-text="<h1 class='t-lede'>The smarter way to hydrate on-the-go without the plastic waste</h1>"
+    />
+
+    <!-- Split -->
+    <Split
+      p-image="1.png"
+      p-color="#fff"
+      p-background-color="#59a0e6"
+      :p-cta="{ text: 'Our Story', theme: 'white', link: 'https://vuejs.org/' }"
+      p-text="
+        <p>Sipple Hydration Stations serve freshly filtered, UV purified water, either cool or cold temperature.</p>
+        <p>We’re the sustainable alternative to bottled water.</p>
+      "
+      :p-reverse="false"
+    />
+
+    <Split
+      p-image="2.jpg"
+      p-background-color="#fff"
+      :p-cta="{ text: 'Find Out More', theme: '', link: 'https://vuejs.org/' }"
+      p-text="
+        <h3>Our technology</h3>
+        <p>How do Sipple Hydration Stations work?</p>
+      "
+      :p-reverse="false"
+    />
+
+    <Split
+      p-color="#fff"
+      p-image="3.jpg"
+      p-background-color="#53565a"
+      :p-cta="{ text: 'Contact', theme: '', link: 'https://vuejs.org/' }"
+      p-text="
+        <h3>Say Hello</h3>
+        <p>Drop us a line to find out where to find us.</p>
+      "
+      :p-reverse="false"
+    />
+
+    <!-- Full -->
+    <Full 
+      p-background-color="#53565a"
+      p-color="white"
+      :p-cta="{ text: 'Our Story', theme: 'white', link: 'https://vuejs.org/' }"
+      p-text="
+        <h1>Plastic ain’t fantastic</h1>
+        <p>Single-use plastic bottles suck.<br>They trash our planet and that’s not okay.</p>
+      "
+    />
+
+    <Full 
+      p-background-color="#59a0e6"
+      p-color="white"
+      :p-cta="{ text: 'Join the movement', theme: 'white', link: 'https://vuejs.org/' }"
+      p-text="
+        <h3>Our mission</h3>
+        <p>Our goal is to change the way the UK hydrates, eliminate excessive waste and protect the planet.</p> 
+        <p>Anyone can join us.</p>
+      "
+    />
+
+    <!-- Feature -->
+    <Feature 
+      p-background-color="#ccc"
+      p-image=""
+      p-intro=""
+      :p-reverse="false"
+      p-text="sdfsdf"
+      p-title="sdfsd"
+    />
+
+
+    <!-- Signoff -->
+    <Signoff 
+      p-background-color="#ccc"
+      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
+      p-image=""
+      p-text=""
+      p-title=""
+    />
+
+    <!-- Testimonial -->
+    <Testimonial 
+      p-author=""
+      p-background-color="#ccc"
+      p-image=""
+      p-quote=""
+    />
+
     <section class="block  wrapper">
 
       <h1>Heading 1</h1>
@@ -25,66 +117,6 @@
       <SvgIcon title="Logo" file="logo" />
 
     </section>
-
-    <!-- Feature -->
-    <Feature 
-      p-background-color="#ccc"
-      p-image=""
-      p-intro=""
-      :p-reverse="false"
-      p-text=""
-      p-title=""
-    />
-
-    <!-- Hero -->
-    <Hero 
-      p-text="<h1 class='t-lede'>The smarter way to hydrate on-the-go without the plastic waste</h1>"
-    />
-
-    <!-- Split -->
-    <Split 
-      p-background-color="#ccc"
-      p-background-image=""
-      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
-      p-text="
-        <h3>Better than recycling</h3>
-        <p>What’s better than recycling? Having nothing to recycle.</p>
-        <p>Our water refills use zero packaging which means zero waste to dispose of</p>
-      "
-      :p-reverse="false"
-    />
-
-    <!-- Full -->
-    <Full 
-      p-background-color="#ccc"
-      p-background-image=""
-      :p-center="false"
-      p-color="#000000"
-      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
-      p-text="
-        <h3>Better than recycling</h3>
-        <p>What’s better than recycling? Having nothing to recycle.</p>
-        <p>Our water refills use zero packaging which means zero waste to dispose of</p>
-      "
-      :p-reverse="false"
-    />
-
-    <!-- Signoff -->
-    <Signoff 
-      p-background-color="#ccc"
-      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
-      p-image=""
-      p-text=""
-      p-title=""
-    />
-
-    <!-- Testimonial -->
-    <Testimonial 
-      p-author=""
-      p-background-color="#ccc"
-      p-image=""
-      p-quote=""
-    />
 
   </main>
 </template>

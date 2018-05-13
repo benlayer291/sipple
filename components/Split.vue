@@ -1,12 +1,14 @@
 <template>
   <section class="Split" :class="{'is-reverse': reverse}" :style="backgroundStyle">
     <div class="grid">
-      <div class="grid__item  u-1/2@sm">
-        <div class="media media--square"></div>
+      <div class="Split__item  is-content  grid__item  u-1/2@sm">
+        <div class="Split__content" :style="`color: ${color}`">
+          <div class="Split__text" v-html="text"></div>
+          <a :href="cta.link" class="Split__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
+        </div>
       </div>
-      <div class="grid__item  u-1/2@sm">
-        <div class="Hero__text" v-html="text"></div>
-        <a :href="cta.link" class="Hero__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
+      <div class="Split__item  is-image  grid__item  u-1/2@sm" :style="`background-image: url(/imgs/${image})`">
+        <div class="Split__image  media  media--square"></div>
       </div>
     </div>
   </section>
@@ -15,12 +17,20 @@
 <script>
 export default {
   props: {
+    pColor: {
+      type: String,
+      required: false,
+    },
     pBackgroundColor: {
       type: String,
       required: true,
       default: '#ffffff',
     },
     pBackgroundImage: {
+      type: String,
+      required: false,
+    },
+    pImage: {
       type: String,
       required: false,
     },
@@ -40,10 +50,12 @@ export default {
   },
   data() {
     return {
+      color: this.pColor,
       backgroundStyle: {
         backgroundColor: this.pBackgroundColor,
         backgroundImage: this.pBackgroundImage,
       },
+      image: this.pImage,
       cta: this.pCta,
       reverse: this.pReverse,
       text: this.pText,
@@ -53,9 +65,40 @@ export default {
 </script>
 
 <style lang="postcss">
+@import "../assets/css/settings/vars";
+
 .Split {
-  width: 100%;
-  margin-bottom: 20px;
+
+  &.is-reverse .is-content {
+    order: 1;
+  }
+
+  &__content {
+    padding: 20% 10%;
+    text-align: center;
+
+    @media(--sm) {
+      padding: 40% 10%;
+    }
+
+    & p {
+      max-width: 15.5em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__button {
+    margin-top: var(--bsu);
+  }
+
+  & .is-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+
 }
 </style>
 
