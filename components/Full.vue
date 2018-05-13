@@ -1,5 +1,12 @@
 <template>
-  <section class="Full"></section>
+  <section class="Full" :style="backgroundStyle">
+    
+    <div class="Full__content" :style="`color: ${color}`">
+      <div class="Full__text" v-html="text"></div>
+      <a :href="cta.link" class="Full__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
+    </div>
+      
+  </section>
 </template>
 
 <script>
@@ -14,10 +21,6 @@ export default {
       type: String,
       required: false,
     },
-    pCenter: {
-      type: Boolean,
-      required: false,
-    },
     pColor: {
       type: String,
       required: false,
@@ -26,30 +29,51 @@ export default {
       type: Object,
       required: false
     },
-    pReverse: {
-      type: Boolean,
-      required: true,
-      default: false
-    },
     pText: {
       type: String,
       required: false,
-    },
-    data() {
+    }
+  },
+  data() {
     return {
+      color: this.pColor,
       backgroundStyle: {
         backgroundColor: this.pBackgroundColor,
         backgroundImage: this.pBackgroundImage,
       },
       cta: this.pCta,
-      reverse: this.pReverse,
       text: this.pText,
     }
-  },
- }
+  }
 }
 </script>
 
 <style lang="postcss">
+@import "../assets/css/settings/vars";
+
+.Full {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%;
+  min-height: 90vh;
+  padding: var(--bsu-lg);
+  color: var(--white);
+  text-align: center;
+
+  &__content {
+
+    & p {
+      max-width: 20em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__button {
+    margin-top: var(--bsu);
+  }
+
+}
 
 </style>

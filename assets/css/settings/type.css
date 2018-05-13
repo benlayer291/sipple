@@ -61,9 +61,14 @@ h3, .t-h3 {
   font-size: 30px;
   line-height: calc(36/30);
   letter-spacing: .15em;
+  font-weight: normal;
 }
 
 h4, .t-h4 {
+  font-size: 15px;
+  line-height: calc(20/15);
+  font-weight: normal;
+  letter-spacing: .15em;
 }
 
 h5, .t-h5 {
@@ -114,6 +119,15 @@ address,
   letter-spacing: .02em;
   font-weight: 300;
   text-transform: none;
+}
+
+.t-small {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: calc(20/15);
+  letter-spacing: .02em;
+  font-weight: 300;
+  font-style: normal;
 }
 
 /**

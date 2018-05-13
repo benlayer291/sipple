@@ -46,7 +46,7 @@ export default {
   flex-flow: column nowrap;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 90vh;
   padding: var(--bsu-lg);
   color: var(--white);
 

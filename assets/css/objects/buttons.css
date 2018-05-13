@@ -11,7 +11,8 @@
   z-index: 1;
   display: inline-block;
   vertical-align: middle;
-  min-width: 300px;
+  width: 100%;
+  max-width: 300px;
   font-size: 15px;
   line-height: calc(20/15);
   font-weight: normal;
@@ -22,6 +23,7 @@
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
+  color: var(--grey1);
   background-color: var(--white);
   border: thin solid var(--blue);
   transition: var(--trans);
@@ -33,6 +35,37 @@
 
   &:active {
     background-color: color(var(--blue) shade(15%) );
+  }
+
+  &--white {
+    border-color: transparent;
+
+    &:matches(:focus, :hover) {
+      border-color: transparent;
+      background-color: var(--turquoise);
+    }
+
+    &:active {
+      background-color: color(var(--turquoise) shade(15%) );
+    }
+    
+  }
+
+  &--ghost {
+    color: var(--white);
+    background-color: transparent;
+    border-color: var(--white);
+
+    &:matches(:focus, :hover) {
+      color: var(--blue);
+      background-color: var(--white);
+    }
+
+    &:active {
+      background-color: color(var(--white) a(80%));
+      border-color: color(var(--white) a(80%));
+    }
+    
   }
 
   &:disabled,
