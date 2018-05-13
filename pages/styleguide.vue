@@ -70,12 +70,21 @@
     />
 
     <!-- Signoff -->
-    <Signoff />
-
-    
+    <Signoff 
+      p-background-color="#ccc"
+      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
+      p-image=""
+      p-text=""
+      p-title=""
+    />
 
     <!-- Testimonial -->
-    <Testimonial />
+    <Testimonial 
+      p-author=""
+      p-background-color="#ccc"
+      p-image=""
+      p-quote=""
+    />
 
   </main>
 </template>
