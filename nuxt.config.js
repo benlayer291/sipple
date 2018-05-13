@@ -18,6 +18,12 @@ module.exports = {
   */
   loading: false,
   /*
+  ** Plugins
+  */
+  plugins: [
+    '~/plugins/bus'
+  ],
+  /*
   ** CSS
   */
   generate: {

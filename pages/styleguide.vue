@@ -22,13 +22,7 @@
 
       <hr>
 
-      <span class="u-logo-diamond">
-        <!-- <SvgIcon title="Logo" file="logo-mask2" /> -->
-      </span>
-
-      <span class="u-logo-Copy">
-        <!-- <SvgIcon title="Logo" file="logo-Copy" /> -->
-      </span>
+      <SvgIcon title="Logo" file="logo" />
 
     </section>
 
@@ -40,20 +34,26 @@
       p-text="<h1 class='t-lede'>The smarter way to hydrate on-the-go without the plastic waste</h1>"
     />
 
+    <!-- Split -->
+    <Split 
+      p-background-color="#ccc"
+      p-background-image=""
+      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
+      p-text="
+        <h3>Better than recycling</h3>
+        <p>What’s better than recycling? Having nothing to recycle.</p>
+        <p>Our water refills use zero packaging which means zero waste to dispose of</p>
+      "
+      :p-reverse="false"
+    />
+
     <!-- Full -->
     <Full />
 
     <!-- Signoff -->
     <Signoff />
 
-    <!-- Split -->
-    <Split 
-      p-background-color="blue"
-      p-background-image=""
-      :p-cta="{ text: 'Button', theme: 'primary', link: 'https://vuejs.org/' }"
-      p-text="<h1>This is a Split component</h1>"
-      :p-reverse="false"
-    />
+    
 
     <!-- Testimonial -->
     <Testimonial />
@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import SvgIcon from '@/components/SvgIcon'
 import Feature from '@/components/Feature'
 import Full from '@/components/Full'
 import Hero from '@/components/Hero'
@@ -71,6 +72,7 @@ import Testimonial from '@/components/Testimonial'
 
 export default {
   components: {
+    SvgIcon,
     Feature,
     Full,
     Hero,
