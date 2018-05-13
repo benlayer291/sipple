@@ -9,7 +9,6 @@
         <a :href="cta.link" class="Hero__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
       </div>
     </div>
-  
   </section>
 </template>
 
