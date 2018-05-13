@@ -51,9 +51,12 @@ export default {
   color: var(--white);
 
   &__text {
-    max-width: 34em;
     margin: auto;
     text-align: center;
+
+    & h1 {
+      max-width: 20em;
+    }
   }
 }
 </style>

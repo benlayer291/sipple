@@ -12,8 +12,8 @@
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  max-width: 300px;
-  font-size: 15px;
+  max-width: 200px;
+  font-size: 10px;
   line-height: calc(20/15);
   font-weight: normal;
   letter-spacing: .15em;
@@ -30,6 +30,11 @@
     color var(--trans),
     background-color var(--trans),
     border var(--trans);
+
+  @media(--sm) {
+    font-size: 15px;
+    max-width: 300px;
+  }
 
   &:matches(:focus, :hover) {
     color: var(--white);

@@ -56,10 +56,14 @@ export default {
   flex-flow: column nowrap;
   justify-content: center;
   width: 100%;
-  min-height: 90vh;
-  padding: var(--bsu-lg);
+  padding: 20% 10%;
   color: var(--white);
   text-align: center;
+
+  @media(--sm) {
+    min-height: 90vh;
+    padding: var(--bsu-lg);
+  }
 
   &__content {
 

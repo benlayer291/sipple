@@ -30,13 +30,7 @@
   /* Base Max Width */
 
   --bmw: 1440px;
-  --width: 100%;
   --gutter: 40px;
-  --columns: 10;
-  --column: calc(
-    (var(--width) - (var(--gutter) * calc(var(--columns) - 1))) /
-    var(--columns)
-  );
 
   /* Transition */
   --speed: .25s;
@@ -47,7 +41,7 @@
   --font-sans: "Faro", system-ui;
   --font-slab: "Plaak", system-ui;
 
-  /* UI */
+  /* Global */
   --main-page-bg: var(--white);
   --main-page-color: var(--grey1);
   --main-page-bg-selection: var(--blue);
@@ -64,10 +58,9 @@
   --z5: 50;
 
   /* UI */
-
---burger-height: 2px;
---burger-width:  40px;
---burger-gutter: 10px;
+--burger-height: .05em;
+--burger-width:  1em;
+--burger-gutter: .25em;
 }
 
 /**

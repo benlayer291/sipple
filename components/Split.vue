@@ -4,7 +4,7 @@
       <div class="Split__item  is-content  grid__item  u-1/2@sm">
         <div class="Split__content" :style="`color: ${color}`">
           <div class="Split__text" v-html="text"></div>
-          <a :href="cta.link" class="Split__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
+          <a v-if="cta" :href="cta.link" class="Split__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
         </div>
       </div>
       <div class="Split__item  is-image  grid__item  u-1/2@sm" :style="`background-image: url(/imgs/${image})`">
@@ -69,17 +69,27 @@ export default {
 
 .Split {
 
-  &.is-reverse .is-content {
-    order: 1;
+  &__item {
+
+    &.is-content {
+      align-self: center;
+
+      .Split.is-reverse & {
+        order: 1;
+      }
+    }
+
+    &.is-image {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 0;
+    }
   }
 
   &__content {
     padding: 20% 10%;
     text-align: center;
-
-    @media(--sm) {
-      padding: 40% 10%;
-    }
 
     & p {
       max-width: 15.5em;
@@ -91,14 +101,6 @@ export default {
   &__button {
     margin-top: var(--bsu);
   }
-
-  & .is-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 0;
-  }
-
 }
 </style>
 
