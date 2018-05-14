@@ -77,7 +77,7 @@ export default {
     padding: 10%;
 
     @media(--sm) {
-      padding: 20% var(--bsu-lg);
+      padding: 10% var(--bsu-lg);
     }
     
     & p {
@@ -90,6 +90,24 @@ export default {
       max-width: 24.5em;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+
+  &__large {
+    font-size: 2.571428571em;
+    display: inline-block;
+
+    & + .Full__small {
+      margin-top: .525em;
+    }
+
+  }
+
+  &__small {
+    display: inline-block;
+
+    & + .Full__large {
+      margin-top: .16em;
     }
   }
 

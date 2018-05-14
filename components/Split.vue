@@ -97,10 +97,6 @@ export default {
       background-position: center;
       background-size: cover;
       margin-bottom: 0;
-
-      @media(--sm) {
-        min-height: 600px;
-      }
     }
   }
 

@@ -49,7 +49,7 @@ h1, .t-h1 {
   line-height: calc(153/180);
   letter-spacing: .005em;
 
-  @media(--sm) {
+  @media(--xs) {
     font-size: 180px;
   }
 }
@@ -60,7 +60,7 @@ h2, .t-h2 {
    line-height: calc(153/180);
   letter-spacing: .005em;
 
-  @media(--sm) {
+  @media(--xs) {
     font-size: 70px;
   }
 }
@@ -72,7 +72,7 @@ h3, .t-h3 {
   letter-spacing: .15em;
   font-weight: normal;
 
-  @media(--sm) {
+  @media(--xs) {
     font-size: 30px;
   }
 }
@@ -84,7 +84,7 @@ h4, .t-h4 {
   font-weight: normal;
   letter-spacing: .15em;
 
-  @media(--sm) {
+  @media(--xs) {
     font-size: 15px;
   }
 }
@@ -106,8 +106,9 @@ address,
   line-height: calc(26/20);
   letter-spacing: .02em;
   font-weight: 300;
+  font-style: normal;
 
-  @media(--sm) {
+  @media(--xs) {
     font-size: 20px;
   }
 
@@ -142,7 +143,7 @@ address,
   font-weight: 300;
   text-transform: none;
 
-  @media(--sm) {
+  @media(--xs) {
     font-size: 30px;
   }
 }
@@ -155,7 +156,7 @@ address,
   font-weight: 300;
   font-style: normal;
 
-  @media(--sm) {
+  @media(--xs) {
     font-size: 15px;
   }
 }
@@ -201,6 +202,21 @@ sub {
 /**
  * Quote styling.
  */
+
+blockquote {
+  quotes: "\2018""\2019";
+  & p {
+
+    &:first-of-type:before {
+      content: open-quote;
+      margin-right: .1em;
+    }
+    &:last-of-type:after {
+      content: close-quote;
+      margin-left: .1em;
+    }
+  }
+}
 
 q {
   font-style: italic;
