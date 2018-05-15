@@ -19,6 +19,20 @@
       :p-reverse="false"
     />
 
+    <!-- Split-text -->
+    <Split-text
+      p-color-a="#fff"
+      p-background-color-a="#53565a"
+      p-text-a="
+        <h3 class='t-h2'>Transporting bottled waters generates 30,100 tonnes of CO2</h3>
+      "
+      p-color-b="#53565a"
+      p-background-color-b="#fff"
+      p-text-b="
+        <p class='t-lede'>If that wasn't enough, lorries transporting heavy bottles of water around the UK has an enormous carbon footprint.</p>
+      "
+    />
+
     <!-- Split -->
     <Split
       p-image="10.png"
@@ -48,11 +62,13 @@
 <script>
 import Hero from '@/components/Hero'
 import Split from '@/components/Split'
+import SplitText from '@/components/Split-text'
 
 export default {
   components: {
     Hero,
     Split,
+    SplitText,
   },
 }
 </script>
