@@ -35,7 +35,7 @@
             <nuxt-link to="/story" class="Header__link" @click.native="toggleMenu">Our story</nuxt-link>
           </li>
           <li class="Header__item">
-            <nuxt-link to="/contact" class="Header__link" @click.native="toggleMenu">Contact</nuxt-link>
+            <a href="#" class="Header__link" @click.prevent="scrollTo('.Footer')">Contact</a>
           </li>
           <li class="Header__item">
             <nuxt-link to="/styleguide" class="Header__link" @click.native="toggleMenu">Styleguide</nuxt-link>
@@ -67,8 +67,17 @@ export default {
     })
   },
   methods: {
-    scroller (val) {
+    scroller(val) {
       this.hasScrolled = val
+    },
+    scrollTo(target) {
+      this.menuOpen = false
+
+      setTimeout(() => {
+        document.querySelector(target).scrollIntoView({ 
+          behavior: 'smooth' 
+        });
+      }, 250)
     },
     toggleMenu() {
       this.menuOpen = !this.menuOpen
