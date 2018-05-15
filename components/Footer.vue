@@ -1,59 +1,61 @@
 <template>
-  <footer class="Footer  wrapper">
-    <div class="grid  grid--rigid">
-      
-      <div class="grid__item  u-1/3@sm">
-        <div class="Footer__item">
-          <h4>Find us on social</h4>
-          <ul class="Footer__social">
-            <li>
-              <a href="">
-                <SvgIcon className="i-social" title="Facebook" file="icon-facebook" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <SvgIcon className="i-social" title="instagram" file="icon-instagram" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <SvgIcon className="i-social" title="twitter" file="icon-twitter" />
-              </a>
-            </li>
-          </ul>
+  <footer class="Footer">
+    <div class="wrapper">
+      <div class="grid  grid--rigid">
+        
+        <div class="grid__item  u-1/3@sm">
+          <div class="Footer__item">
+            <h4>Find us on social</h4>
+            <ul class="Footer__social">
+              <li>
+                <a href="">
+                  <SvgIcon className="i-social" title="Facebook" file="icon-facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <SvgIcon className="i-social" title="instagram" file="icon-instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <SvgIcon className="i-social" title="twitter" file="icon-twitter" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="grid__item  u-1/3@sm">
-        <div class="Footer__item">
-          <h4>Keep me posted</h4>
-          <p class="t-small">We promise not to spam you or share your data. That’s not our style.</p>
-          <form class="Footer__form  t-small" action="">
-            <div class="Footer__field">
-              <input class="Footer__input" type="text" placeholder="Name" autocorrect="off" spellcheck="false" required>
-            </div>
-            <div class="Footer__field">
-              <input class="Footer__input" type="email" placeholder="Email" autocorrect="off" spellcheck="false" required>
-            </div>
-            <button class="Footer__button  button  button--ghost" type="submit">Sign me up</button>
-          </form>
+        <div class="grid__item  u-1/3@sm">
+          <div class="Footer__item">
+            <h4>Keep me posted</h4>
+            <p class="t-small">We promise not to spam you or share your data. That’s not our style.</p>
+            <form class="Footer__form  t-small" action="">
+              <div class="Footer__field">
+                <input class="Footer__input" type="text" placeholder="Name" autocorrect="off" spellcheck="false" required>
+              </div>
+              <div class="Footer__field">
+                <input class="Footer__input" type="email" placeholder="Email" autocorrect="off" spellcheck="false" required>
+              </div>
+              <button class="Footer__button  button  button--ghost" type="submit">Sign me up</button>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class="grid__item  u-1/3@sm">
-        <div class="Footer__item">
-          <h4>Sipple hydration</h4>
-          <address class="t-small">
-            35/36 New Covent Garden Market<br>
-            London SW8 5EE, United Kingdom<br>
-            +44 (0)203 948 6786
-          </address>
-          <p class="t-small"><a href="mailto:hello@sipplehydration.com">hello@sipplehydration.com</a></p>
+        <div class="grid__item  u-1/3@sm">
+          <div class="Footer__item">
+            <h4>Sipple hydration</h4>
+            <address class="t-small">
+              35/36 New Covent Garden Market<br>
+              London SW8 5EE, United Kingdom<br>
+              +44 (0)203 948 6786
+            </address>
+            <p class="t-small"><a href="mailto:hello@sipplehydration.com">hello@sipplehydration.com</a></p>
+          </div>
         </div>
+
       </div>
 
+      <p class="Footer__meta">&copy; Copyright {{ new Date().getFullYear() }} Sipple. Water without the waste.</p>
     </div>
-
-    <p class="Footer__meta">&copy; Copyright {{ new Date().getFullYear() }} Sipple. Water without the waste.</p>
   </footer>
 </template>
 
