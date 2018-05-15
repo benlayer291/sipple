@@ -88,16 +88,28 @@
 </template>
 
 <script>
+import Full from '@/components/Full'
+import FullImage from '@/components/Full-image'
 import Hero from '@/components/Hero'
 import Full from '@/components/Full'
 import Split from '@/components/Split'
+<<<<<<< HEAD
+=======
+import SplitText from '@/components/Split-text'
+>>>>>>> development
 import Testimonial from '@/components/Testimonial'
 
 export default {
   components: {
+    Full,
+    FullImage,
     Hero,
     Full,
     Split,
+<<<<<<< HEAD
+=======
+    SplitText,
+>>>>>>> development
     Testimonial,
   },
 }

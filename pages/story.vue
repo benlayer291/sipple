@@ -18,6 +18,25 @@
       :p-reverse="true"
     />
 
+    <!-- Full -->
+    <Full 
+      p-background-color="#EbEbEb"
+      p-color="#53565a"
+      p-text="
+        <p class='t-lede'>An oil-chugging global monster was born. And the rest, as they say, is history. Billions of plastic bottles spewed into the oceans and landfills, microplastics in our food and an island of trash three times the size of France floating in the Pacific.</p>
+      "
+    />
+
+    <!-- Full -->
+    <Full 
+      p-image="mission1.jpg"
+    />
+
+    <!-- Full -->
+    <Full 
+      p-image="story2.jpg"
+    />
+
     <!-- Split -->
     <Split
       p-image="7.jpg"
@@ -29,26 +48,11 @@
       "
       :p-reverse="false"
     />
-    
-    <!-- Full -->
-    <Full 
-      p-background-color="#E6E6E6"
-      p-text="
-        <p class='t-lede'>An oil-chugging global monster was born. And the rest, as they say, is history. Billions of plastic bottles spewed into the oceans and landfills, microplastics in our food and an island of trash three times the size of France floating in the Pacific.</p>
-      "
-    />
-
-    <Full 
-      p-image="mission1.jpg"
-    />
-
-    <Full 
-      p-image="story2.jpg"
-    />
 
     <!-- Full -->
     <Full 
-      p-background-color="#E6E6E6"
+      p-background-color="#EbEbEb"
+      p-color="#53565a"
       p-text="
         <h3>Introducing Sipple</h3>
         <p>Sipple Hydration Stations are a sustainable way to drink fresh, filtered water while you’re out and about. Our system doesn’t create waste and it doesn’t harm the planet.</p>
