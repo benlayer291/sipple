@@ -37,9 +37,6 @@
           <li class="Header__item">
             <a href="#" class="Header__link" @click.prevent="scrollTo('.Footer')">Contact</a>
           </li>
-          <li class="Header__item">
-            <nuxt-link to="/styleguide" class="Header__link" @click.native="toggleMenu">Styleguide</nuxt-link>
-          </li>
         </ul>
       </div>
     </nav>

@@ -27,7 +27,26 @@ module.exports = {
   ** CSS
   */
   generate: {
+    routes: [
+      '/',
+      '/problem',
+      '/solution',
+      '/mission',
+      '/solution',
+      '/story',
+    ],
     subFolders: false
+  },
+  sitemap: {
+    exclude: ['/styleguide'],
+    routes: [
+      '/',
+      '/problem',
+      '/solution',
+      '/mission',
+      '/solution',
+      '/story',
+    ],
   },
   /*
   ** CSS
