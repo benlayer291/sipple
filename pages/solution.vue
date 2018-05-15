@@ -10,7 +10,7 @@
     <Split
       p-image="12.jpg"
       p-color="#fff"
-      p-background-color="#2c2c2c"
+      p-background-color="#53565a"
       p-text="
         <h3>Our hydration stations</h3>
         <br>
@@ -38,7 +38,7 @@
         <h4>Tap'n'go</h4>
         <p>Hydration Stations have a contactless payment system. So you can pay for your refill with a “tap” of your card or a “wave” of your Apple Pay… did our water puns make a splash? </p>
       "
-      :p-reverse="true"
+      :p-reverse="false"
     />
 
     <!-- Split -->
