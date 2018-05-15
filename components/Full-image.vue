@@ -1,13 +1,13 @@
 <template>
   <section class="Full" :style="backgroundStyle">
     
-    <div v-if="text || cta" class="Full__content" :style="`color: ${color}`">
+    <img v-if="image" :src="`/imgs/${image}`" alt="Sipple">
+      
+    <div v-if="text || cta" class="Full__content  Full__content--absolute" :style="`color: ${color}`">
       <div class="Full__text" v-html="text"></div>
       <a v-if="cta" :href="cta.link" class="Full__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
     </div>
-    
-    <img v-if="image" :src="`/imgs/${image}`" alt="Sipple">
-      
+
   </section>
 </template>
 
@@ -18,10 +18,6 @@ export default {
       type: String,
       required: false,
       default: '#ffffff',
-    },
-    pBackgroundImage: {
-      type: String,
-      required: false,
     },
     pColor: {
       type: String,
@@ -55,10 +51,6 @@ export default {
 
       style.backgroundColor = this.pBackgroundColor
 
-      if (this.pBackgroundImage) {
-        style.backgroundImage = `url(/imgs/${this.pBackgroundImage})`
-      }
-
       return style
     }
   }
@@ -74,10 +66,7 @@ export default {
   justify-content: center;
   width: 100%;
   text-align: center;
-
-  @media(--sm) {
-    
-  }
+  position: relative;
 
   & img {
     width: 100%;
@@ -103,8 +92,21 @@ export default {
     }
   }
 
+  &__content--absolute {
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, 0);
+
+    @media(--sm) {
+      bottom: 20%;
+    }
+  }
+
   &__button {
     margin-top: var(--bsu);
+    min-width: 300px;
   }
 
 }

@@ -38,10 +38,12 @@
       "
     />
 
+    <!-- Full -->
     <Full 
       p-image="mission1.jpg"
     />
 
+    <!-- Full -->
     <Full 
       p-image="story2.jpg"
     />
