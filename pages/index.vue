@@ -10,7 +10,7 @@
       p-image="1.png"
       p-color="#fff"
       p-background-color="#59a0e6"
-      :p-cta="{ text: 'Our Story', theme: 'white', link: '/story' }"
+      :p-cta="{ text: 'About us', theme: 'white', link: '/about' }"
       p-text="
         <p>Sipple Hydration Stations serve freshly filtered, UV purified water, either cool or cold temperature.</p>
         <p>We’re the sustainable alternative to bottled water.</p>

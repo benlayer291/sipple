@@ -32,7 +32,7 @@
             <nuxt-link to="/mission" class="Header__link" @click.native="toggleMenu">Our mission</nuxt-link>
           </li>
           <li class="Header__item">
-            <nuxt-link to="/story" class="Header__link" @click.native="toggleMenu">Our story</nuxt-link>
+            <nuxt-link to="/about" class="Header__link" @click.native="toggleMenu">About us</nuxt-link>
           </li>
           <li class="Header__item">
             <a href="#" class="Header__link" @click.prevent="scrollTo('.Footer')">Contact</a>
@@ -103,7 +103,7 @@ export default {
     font-size: 20px;
 
     @media(--sm) {
-      top: var(--bsu-sm);
+      top: -10px;
       font-size: 40px;
       padding: var(--bsu-lg);
     }
@@ -128,6 +128,7 @@ export default {
 
   &__logos {
     position: relative;
+    top: -2px;
     display: inline-block;
     color: var(--white);
     padding: var(--bsu);
@@ -137,7 +138,7 @@ export default {
     line-height: 0;
 
     @media(--sm) {
-      margin-top: 28px;
+      top: 19px;
       font-size: 182px;
     }
   }
