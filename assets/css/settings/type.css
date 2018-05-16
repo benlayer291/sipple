@@ -209,11 +209,9 @@ blockquote {
 
     &:first-of-type:before {
       content: open-quote;
-      margin-right: .1em;
     }
     &:last-of-type:after {
       content: close-quote;
-      margin-left: .1em;
     }
   }
 }

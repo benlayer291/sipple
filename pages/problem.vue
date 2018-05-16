@@ -47,7 +47,21 @@
 
     <!-- Full -->
     <Full 
-      p-image="problem2.jpg"
+      p-image="problem1.jpg"
+    />
+
+    <!-- Split-text -->
+    <Split-text
+      p-color-a="#fff"
+      p-background-color-a="#53565a"
+      p-text-a="
+        <h3 class='t-h2'>Transporting bottled waters generates 30,100 tonnes of CO2</h3>
+      "
+      p-color-b="#53565a"
+      p-background-color-b="#fff"
+      p-text-b="
+        <p class='t-lede'>If that wasn’t enough, lorries transporting heavy bottles of water around the UK has an enormous carbon footprint.</p>
+      "
     />
 
     <!-- Split -->
@@ -84,6 +98,13 @@
       p-author="Sir David Attenborough"
     />
 
+    <!-- Signoff -->
+    <Signoff
+      p-image="mission3.jpg"
+      p-background-color="#fff"
+      :p-cta="{ text: 'Our Solution', theme: 'white', link: 'https://vuejs.org/' }"
+    />
+
   </main>
 </template>
 
@@ -91,26 +112,20 @@
 import Full from '@/components/Full'
 import FullImage from '@/components/Full-image'
 import Hero from '@/components/Hero'
-import Full from '@/components/Full'
 import Split from '@/components/Split'
-<<<<<<< HEAD
-=======
 import SplitText from '@/components/Split-text'
->>>>>>> development
 import Testimonial from '@/components/Testimonial'
+import Signoff from '@/components/Signoff'
 
 export default {
   components: {
     Full,
     FullImage,
     Hero,
-    Full,
     Split,
-<<<<<<< HEAD
-=======
     SplitText,
->>>>>>> development
     Testimonial,
+    Signoff,
   },
 }
 </script>

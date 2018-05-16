@@ -108,8 +108,20 @@ export default {
       padding: 20% 10%;
     }
 
+    & h4 {
+      max-width: 14em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     & p {
       max-width: 15.5em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    & p.t-small {
+      max-width: 19em;
       margin-left: auto;
       margin-right: auto;
     }

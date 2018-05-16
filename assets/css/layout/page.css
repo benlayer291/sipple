@@ -35,7 +35,7 @@ body {
   backface-visibility: hidden;
   transition: transform var(--trans);
 
-  .Header.is-open + & {
+  .Header.is-open ~ & {
     transform: translateX(50%) translateZ(0);
   }
 }

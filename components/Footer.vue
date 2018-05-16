@@ -77,6 +77,13 @@ export default {
   padding: var(--bsu-lg);
   color: var(--white);
   background-color: var(--blue);
+  transform: translateX(0%) translateZ(0);
+  backface-visibility: hidden;
+  transition: transform var(--trans);
+
+  .Header.is-open ~ & {
+    transform: translateX(50%) translateZ(0);
+  }
 
   &__item {
     max-width: 300px;

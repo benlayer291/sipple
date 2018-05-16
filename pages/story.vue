@@ -3,7 +3,7 @@
   
     <!-- Hero -->
     <Hero 
-      p-text="<h1 class='t-lede'>The future's not disposable</h1>"
+      p-text="<h1 class='t-lede'>The future’s not disposable</h1>"
     />
 
     <!-- Split -->

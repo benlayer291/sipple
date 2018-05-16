@@ -25,7 +25,7 @@
     <Split
       p-image="mission2.jpg"
       p-color="#fff"
-      p-background-color="#53565a"
+      p-background-color="#503bd2"
       :p-cta="{ text: 'Our Solution', theme: 'white', link: 'https://vuejs.org/' }"
       p-text="
         <p>Reversing the environmental dammage we’ve already done is no small task .But together we’re making a start.</p>
