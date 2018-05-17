@@ -42,4 +42,8 @@
   &--square {
     padding-bottom: 100%;
   }
+
+  &--portrait {
+    padding-bottom: calc(600 / 514 * 100%);
+  }
 }

@@ -52,16 +52,28 @@ h1, .t-h1 {
   @media(--xs) {
     font-size: 180px;
   }
+
+  /* &.t-responsive {
+    font-size: 17.525vw;
+  } */
 }
 
 h2, .t-h2 {
   font-family: var(--font-slab);
   font-size: 24px;
-   line-height: calc(153/180);
+  line-height: calc(153/180);
   letter-spacing: .005em;
 
   @media(--xs) {
     font-size: 70px;
+  }
+
+  &.t-responsive {
+    /* font-size: 10.05vw; */
+
+    /* @media(--sm) {
+      font-size: 6.825vw;
+    } */
   }
 }
 
@@ -160,6 +172,32 @@ address,
     font-size: 15px;
   }
 }
+
+/* .t-repsonsive {
+  font-size: 10.05vw;
+
+  @media(--sm) {
+    font-size: 6.825vw;
+  }
+} */
+
+/* .u-large {
+  font-size: 2.571428571em;
+  display: block;
+
+  & + .u-small {
+    margin-top: .525em;
+  }
+
+}
+
+.u-small {
+  display: block;
+
+  & + .u-large {
+    margin-top: .16em;
+  }
+} */
 
 /**
  * Prose.

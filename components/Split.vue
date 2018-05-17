@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="Split__item  is-image  grid__item  u-1/2@sm" :style="`background-image: url(/imgs/${image})`">
-        <div class="Split__image  media  media--square"></div>
+        <div class="Split__image  media  media--portrait"></div>
       </div>
     </div>
   </section>
@@ -79,9 +79,12 @@ export default {
 .Split {
 
   &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
 
     &.is-content {
-      align-self: center;
 
       .Split.is-reverse & {
         order: 0;
@@ -101,13 +104,11 @@ export default {
   }
 
   &__content {
+    width: 100%;
     padding: 10%;
     text-align: center;
 
-    @media(--sm) {
-      padding: 20% 10%;
-    }
-
+    & h3,
     & h4 {
       max-width: 14em;
       margin-left: auto;
@@ -115,7 +116,7 @@ export default {
     }
 
     & p {
-      max-width: 15.5em;
+      max-width: 13em;
       margin-left: auto;
       margin-right: auto;
     }

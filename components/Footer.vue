@@ -1,6 +1,6 @@
 <template>
   <footer class="Footer">
-    <div class="wrapper">
+    <div class="Footer__inner  wrapper">
       <div class="grid  grid--rigid">
         
         <div class="grid__item  u-1/3@md">
@@ -74,7 +74,6 @@ export default {
 @import "../assets/css/settings/vars";
 
 .Footer {
-  padding: var(--bsu-lg);
   color: var(--white);
   background-color: var(--blue);
   transform: translateX(0%) translateZ(0);
@@ -83,6 +82,11 @@ export default {
 
   .Header.is-open ~ & {
     transform: translateX(50%) translateZ(0);
+  }
+
+  &__inner {
+    padding-top: var(--bsu-lg);
+    padding-bottom: var(--bsu-lg);
   }
 
   &__item {
