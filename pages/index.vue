@@ -53,8 +53,9 @@
 
     <!-- Split -->
     <Split
-      p-image="pour-bottle.jpg"
       p-background-color="#fff"
+      p-image="pour-bottle.png"
+      p-background-color-alt="#ebebeb"
       p-text="
         <h3>The smarter alternative</h3>
         <p>How do Sipple Hydration Stations work?</p>

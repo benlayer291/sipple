@@ -19,7 +19,7 @@
 
     <!-- Full -->
     <Full 
-      p-background-color="#e6e6e6"
+      p-background-color="#ebebeb"
       p-text="
         <p class='t-lede'>
           An oil-chugging global monster was born. And the rest, as they say, is history: billions of plastic bottles spewed into the oceans and landfills, microplastics in our food and an island of trash three times the size of France floating in the Pacific.

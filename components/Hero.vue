@@ -63,8 +63,14 @@ export default {
     text-align: center;
     margin: auto;
 
-    & h1, p {
+    & h1 {
       max-width: 20em;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    & p {
+      max-width: 22em;
       margin-right: auto;
       margin-left: auto;
     }

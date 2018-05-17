@@ -7,8 +7,8 @@
           <a v-if="cta" :href="cta.link" class="Split__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
         </div>
       </div>
-      <div class="Split__item  is-image  grid__item  u-1/2@sm" :style="`background-image: url(/imgs/${image})`">
-        <div class="Split__image  media  media--portrait"></div>
+      <div class="Split__item  is-image  grid__item  u-1/2@sm" :style="backgroundStyleAlt">
+        <div :class="`Split__image  media  media--${ratio}`"></div>
       </div>
     </div>
   </section>
@@ -26,7 +26,7 @@ export default {
       required: true,
       default: '#ffffff',
     },
-    pBackgroundImage: {
+    pBackgroundColorAlt: {
       type: String,
       required: false,
     },
@@ -46,15 +46,20 @@ export default {
     pText: {
       type: String,
       required: false,
+    },
+    pRatio: {
+      type: String,
+      required: false,
+      default: 'portrait',
     }
   },
   data() {
     return {
       color: this.pColor,
-      image: this.pImage,
       cta: this.pCta,
       reverse: this.pReverse,
       text: this.pText,
+      ratio: this.pRatio,
     }
   },
   computed: {
@@ -63,8 +68,15 @@ export default {
 
       style.backgroundColor = this.pBackgroundColor
 
-      if (this.pBackgroundImage) {
-        style.backgroundImage = this.pBackgroundImage
+      return style
+    },
+    backgroundStyleAlt() {
+      const style = {}
+
+      style.backgroundColor = this.pBackgroundColorAlt
+
+      if (this.pImage) {
+        style.backgroundImage = `url(/imgs/${this.pImage})`
       }
 
       return style
@@ -105,7 +117,7 @@ export default {
 
   &__content {
     width: 100%;
-    padding: 10%;
+    padding: 15%;
     text-align: center;
 
     & h3,
@@ -125,6 +137,10 @@ export default {
       max-width: 19em;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    & p + h4 {
+      margin-top: var(--bsu-lg);
     }
   }
 
