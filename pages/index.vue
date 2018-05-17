@@ -27,7 +27,7 @@
           <span class='fitDouble__large'>Water</span>
           <span class='fitDouble__small'>without the</span>
           <span class='fitDouble__large'>waste</span>
-        </h2> 
+        </h2>
       "
       p-background-color-b="#fff"
       p-text-b="
