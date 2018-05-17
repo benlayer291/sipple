@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="grid  grid--rigid">
         
-        <div class="grid__item  u-1/3@sm">
+        <div class="grid__item  u-1/3@md">
           <div class="Footer__item">
             <h4>Find us on social</h4>
             <ul class="Footer__social">
@@ -25,7 +25,7 @@
             </ul>
           </div>
         </div>
-        <div class="grid__item  u-1/3@sm">
+        <div class="grid__item  u-1/3@md">
           <div class="Footer__item">
             <h4>Keep me posted</h4>
             <p class="t-small">We promise not to spam you or share your data. That’s not our style.</p>
@@ -40,7 +40,7 @@
             </form>
           </div>
         </div>
-        <div class="grid__item  u-1/3@sm">
+        <div class="grid__item  u-1/3@md">
           <div class="Footer__item">
             <h4>Sipple hydration</h4>
             <address class="t-small">

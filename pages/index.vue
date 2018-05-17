@@ -9,7 +9,7 @@
     <Split
       p-image="1.png"
       p-color="#fff"
-      p-background-color="#59a0e6"
+      p-background-color="#6eafff"
       :p-cta="{ text: 'About us', theme: 'white', link: '/about' }"
       p-text="
         <p>Sipple Hydration Stations serve freshly filtered, UV purified water, either cool or cold temperature.</p>
@@ -23,9 +23,9 @@
       p-image="4.jpg"
       p-background-color="#fff"
       p-text="
-        <h3>What’s better than recycling?</h3>
-        <p>Having nothing to recycle.</p>
-        <p>Our water refills use zero packaging which means zero waste to dispose of.</p>
+        <h3>Better than recycling</h3>
+        <p class='t-small'>What's better than recycling? Having nothing to recycle.</p>
+        <p class='t-small'>Our water refills use zero packaging which means zero waste to dispose of.</p>
       "
       :p-reverse="true"
     />
