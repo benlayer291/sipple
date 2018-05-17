@@ -107,49 +107,6 @@ export default {
 
 .Split {
 
-  &__item {
-
-    &.is-content {
-      align-self: center;
-
-      .Split.is-reverse & {
-        order: 0;
-
-        @media(--sm) {
-          order: 1;
-        }
-      }
-    }
-
-    &.is-image {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      margin-bottom: 0;
-
-      @media(--sm) {
-        min-height: 600px;
-      }
-    }
-  }
-
-  &__content {
-    padding: 10%;
-    text-align: center;
-
-    @media(--sm) {
-      padding: 20% 10%;
-    }
-
-    & p {
-      max-width: 15.5em;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  &__button {
-    margin-top: var(--bsu);
-  }
+  
 }
 </style>

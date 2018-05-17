@@ -13,6 +13,8 @@
   vertical-align: middle;
   width: 100%;
   max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 10px;
   line-height: calc(20/15);
   font-weight: normal;

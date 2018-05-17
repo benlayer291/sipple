@@ -11,11 +11,11 @@
   --black: #000000;
 
   --grey1: #53565a;
-  --grey2: #E6E6E6;
+  --grey2: #ebebeb;
 
   --turquoise: #5ae6d2;
   --blue: #503bd2;
-  --blue-light: #59a0e6;
+  --blue-light: #6eafff;
   --pink: #f9e0cd;
   --red: #e65a5a;
   
@@ -23,7 +23,7 @@
   /* Base Spacing Units */
   --bsu-sm: 10px;
   --bsu: 20px;
-  --bsu-lg: 40px;
+  --bsu-lg: 50px;
   --bsu-xl: 80px;
   --bsu-xxl: 160px;
 
@@ -72,8 +72,8 @@
 @custom-media --xxsMax (width <= 499px);
 @custom-media --xs (width >= 600px);
 @custom-media --xsMax (width <= 599px);
-@custom-media --sm (width >= 800px);
-@custom-media --smMax (width <= 799px);
+@custom-media --sm (width >= 700px);
+@custom-media --smMax (width <= 699px);
 @custom-media --md (width >= 992px);
 @custom-media --mdMax (width <= 991px);
 @custom-media --lg (width >= 1200px);

@@ -7,8 +7,8 @@
           <a v-if="cta" :href="cta.link" class="Split__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
         </div>
       </div>
-      <div class="Split__item  is-image  grid__item  u-1/2@sm" :style="`background-image: url(/imgs/${image})`">
-        <div class="Split__image  media  media--square"></div>
+      <div class="Split__item  is-image  grid__item  u-1/2@sm" :style="backgroundStyleAlt">
+        <div :class="`Split__image  media  media--${ratio}`"></div>
       </div>
     </div>
   </section>
@@ -26,7 +26,7 @@ export default {
       required: true,
       default: '#ffffff',
     },
-    pBackgroundImage: {
+    pBackgroundColorAlt: {
       type: String,
       required: false,
     },
@@ -46,15 +46,20 @@ export default {
     pText: {
       type: String,
       required: false,
+    },
+    pRatio: {
+      type: String,
+      required: false,
+      default: 'portrait',
     }
   },
   data() {
     return {
       color: this.pColor,
-      image: this.pImage,
       cta: this.pCta,
       reverse: this.pReverse,
       text: this.pText,
+      ratio: this.pRatio,
     }
   },
   computed: {
@@ -63,8 +68,15 @@ export default {
 
       style.backgroundColor = this.pBackgroundColor
 
-      if (this.pBackgroundImage) {
-        style.backgroundImage = this.pBackgroundImage
+      return style
+    },
+    backgroundStyleAlt() {
+      const style = {}
+
+      style.backgroundColor = this.pBackgroundColorAlt
+
+      if (this.pImage) {
+        style.backgroundImage = `url(/imgs/${this.pImage})`
       }
 
       return style
@@ -79,9 +91,12 @@ export default {
 .Split {
 
   &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
 
     &.is-content {
-      align-self: center;
 
       .Split.is-reverse & {
         order: 0;
@@ -97,25 +112,35 @@ export default {
       background-position: center;
       background-size: cover;
       margin-bottom: 0;
-
-      @media(--sm) {
-        min-height: 600px;
-      }
     }
   }
 
   &__content {
-    padding: 10%;
+    width: 100%;
+    padding: 15%;
     text-align: center;
 
-    @media(--sm) {
-      padding: 20% 10%;
+    & h3,
+    & h4 {
+      max-width: 14em;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     & p {
-      max-width: 15.5em;
+      max-width: 15em;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    & p.t-small {
+      max-width: 19em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    & p + h4 {
+      margin-top: var(--bsu-lg);
     }
   }
 

@@ -1,9 +1,9 @@
 <template>
   <footer class="Footer">
-    <div class="wrapper">
+    <div class="Footer__inner  wrapper">
       <div class="grid  grid--rigid">
         
-        <div class="grid__item  u-1/3@sm">
+        <div class="grid__item  u-1/3@md">
           <div class="Footer__item">
             <h4>Find us on social</h4>
             <ul class="Footer__social">
@@ -25,7 +25,7 @@
             </ul>
           </div>
         </div>
-        <div class="grid__item  u-1/3@sm">
+        <div class="grid__item  u-1/3@md">
           <div class="Footer__item">
             <h4>Keep me posted</h4>
             <p class="t-small">We promise not to spam you or share your data. That’s not our style.</p>
@@ -40,7 +40,7 @@
             </form>
           </div>
         </div>
-        <div class="grid__item  u-1/3@sm">
+        <div class="grid__item  u-1/3@md">
           <div class="Footer__item">
             <h4>Sipple hydration</h4>
             <address class="t-small">
@@ -74,9 +74,24 @@ export default {
 @import "../assets/css/settings/vars";
 
 .Footer {
-  padding: var(--bsu-lg);
   color: var(--white);
   background-color: var(--blue);
+  transform: translateX(0%) translateZ(0);
+  backface-visibility: hidden;
+  transition: transform var(--trans);
+
+  .Header.is-open ~ & {
+    transform: translateX(80%) translateZ(0);
+
+    @media(--sm) {
+      transform: translateX(50%) translateZ(0);
+    }
+  }
+
+  &__inner {
+    padding-top: var(--bsu-lg);
+    padding-bottom: var(--bsu-lg);
+  }
 
   &__item {
     max-width: 300px;

@@ -1,0 +1,51 @@
+/*------------------------------------*\
+  #Responsive
+\*------------------------------------*/
+
+/**
+ * Responsive.
+ */
+
+/* Full h1 only */
+.fit {
+  display: block;
+
+  &__large {
+    display: block;
+    font-size: 17.525vw;
+    margin-bottom: .2em;
+  }
+}
+
+/* Full h1 & h2 only */
+.fitDouble {
+  font-size: 7.75vw;
+  
+  @media(--sm) {
+    font-size: 6.825vw;
+  }
+
+  &--small {
+    @media(--sm) {
+      font-size: 5.7vw;
+    }
+  }
+
+  &__small {
+    display: block;
+  }
+
+  &__large {
+    display: block;
+    font-size: 2.571428571em;
+  }
+
+  &__small + &__large {
+    margin-top: .16em;
+  }
+
+  &__large + &__small {
+    margin-top: .525em;
+  }
+}
+

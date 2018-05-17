@@ -26,7 +26,6 @@ export default {
     pColor: {
       type: String,
       required: false,
-      default: '#ffffff',
     },
     pCta:{
       type: Object,
@@ -73,25 +72,31 @@ export default {
   flex-flow: column nowrap;
   justify-content: center;
   width: 100%;
+  min-height: 56.2vw;
   text-align: center;
-
-  @media(--sm) {
-    
-  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   & img {
     width: 100%;
   }
 
   &__content {
-    padding: 10%;
+    padding: 15%;
 
     @media(--sm) {
-      padding: 20% var(--bsu-lg);
+      padding: 15% var(--bsu-lg);
+    }
+
+    & h3 {
+      max-width: 14em;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     & p {
-      max-width: 22em;
+      max-width: 21em;
       margin-left: auto;
       margin-right: auto;
     }
@@ -104,7 +109,7 @@ export default {
   }
 
   &__button {
-    margin-top: var(--bsu);
+    margin-top: 1.75em;
   }
 
 }

@@ -1,5 +1,16 @@
 <template>
-  <section class="Feature"></section>
+  <section class="Feature">
+    <div class="grid">
+      <div class="grid__item  u-1/2@sm">
+        <img src="/imgs/solution1.jpg" alt="">
+      </div>
+      <div class="grid__item  u-1/4@sm">
+        
+      </div>
+      <div class="grid__item  u-1/4@sm"></div>
+    </div>
+
+  </section>
 </template>
 
 <script>

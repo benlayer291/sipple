@@ -42,4 +42,12 @@
   &--square {
     padding-bottom: 100%;
   }
+
+  &--portrait {
+    padding-bottom: calc(600 / 514 * 100%);
+  }
+
+  &--tall {
+    padding-bottom: calc(2 / 1 * 100%);
+  }
 }
