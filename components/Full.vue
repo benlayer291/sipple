@@ -26,7 +26,6 @@ export default {
     pColor: {
       type: String,
       required: false,
-      default: '#ffffff',
     },
     pCta:{
       type: Object,

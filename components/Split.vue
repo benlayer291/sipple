@@ -116,7 +116,7 @@ export default {
     }
 
     & p {
-      max-width: 13em;
+      max-width: 15em;
       margin-left: auto;
       margin-right: auto;
     }

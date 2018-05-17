@@ -19,7 +19,7 @@
 
 /* Full h1 & h2 only */
 .fitDouble {
-  font-size: 10.05vw;
+  font-size: 7.75vw;
   
   @media(--sm) {
     font-size: 6.825vw;
