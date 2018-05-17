@@ -196,8 +196,8 @@ sup {
 }
 
 sub {
-  bottom: 0;
-  font-size: 60%;
+  bottom: -.2em;
+  font-size: 50%;
 }
 
 /**

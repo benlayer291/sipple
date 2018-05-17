@@ -55,6 +55,10 @@ export default {
 
 .Signoff {
 
+  & img {
+    width: 100%;
+  }
+
   &__content {
     text-align: center;
     padding: 5% 10% 10% 10%;

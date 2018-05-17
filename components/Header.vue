@@ -122,7 +122,11 @@ export default {
     transition: transform var(--trans);
 
     .Header.is-open & {
-      transform: translateX(50%) translateZ(0);
+      transform: translateX(80%) translateZ(0);
+
+      @media(--sm) {
+        transform: translateX(50%) translateZ(0);
+      }
     }
   }
 
@@ -248,12 +252,16 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 80%;
     height: 100vh;
     background-color: var(--pink);
     transform: translateX(-100%) translateZ(0);
     backface-visibility: hidden;
     transition: transform var(--trans);
+
+    @media(--sm) {
+      width: 50%;
+    }
 
     .Header.is-open & {
       transform: translateX(0) translateZ(0);

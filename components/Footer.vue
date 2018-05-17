@@ -81,7 +81,11 @@ export default {
   transition: transform var(--trans);
 
   .Header.is-open ~ & {
-    transform: translateX(50%) translateZ(0);
+    transform: translateX(80%) translateZ(0);
+
+    @media(--sm) {
+      transform: translateX(50%) translateZ(0);
+    }
   }
 
   &__inner {

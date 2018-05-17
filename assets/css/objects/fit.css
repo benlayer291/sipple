@@ -25,6 +25,12 @@
     font-size: 6.825vw;
   }
 
+  &--small {
+    @media(--sm) {
+      font-size: 5.7vw;
+    }
+  }
+
   &__small {
     display: block;
   }
@@ -42,3 +48,4 @@
     margin-top: .525em;
   }
 }
+

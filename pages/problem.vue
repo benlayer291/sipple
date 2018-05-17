@@ -3,20 +3,20 @@
   
     <!-- Hero -->
     <Hero 
-      p-text="<h1 class='t-lede'>People know plastic is bad for the environment.</h1><p class='t-lede'>But exactly how bad?</p>"
+      p-text="<h1 class='t-lede'>People already know plastic is bad for the environment. But exactly how bad?</p>"
     />
 
     <!-- Full -->
     <Full 
-      p-background-color="#53565a"
-      p-color="white"
+      p-background-color="#e65a5a"
+      p-color="#fff"
       p-text="
-        <h2>
-          <span class='Full__small'>Globally we use<br></span>
-          <span class='Full__large'>one million<br></span>
-          <span class='Full__small'>plastic drink bottles<br></span>
-          <span class='Full__large'>every minute</span>
-        </h2> 
+        <h2 class='fitDouble'>
+          <span class='fitDouble__small'>Globally, we use</span>
+          <span class='fitDouble__large'>a million</span>
+          <span class='fitDouble__small'>plastic drink bottles</span>
+          <span class='fitDouble__large'>every minute</span>
+        </h2>
       "
     />
 
@@ -25,23 +25,23 @@
       p-image="8.jpg"
       p-background-color="#fff"
       p-text="
-        <h3>That's a heck of a lot</h3>
-        <p>To put it into perspective that’s another 100,000 or so by the time you reach the end of this sentence. The majority are thrown into landfill or end up in the ocean, and the rest (at best) will be recycled.</p>
+        <h3>That’s a heck<br>of a lot</h3>
+        <p>The majority are thrown into landfill or end up in the ocean, and the rest (at best) will be recycled.</p>
         <p>In the UK alone 7.7 billion plastic water bottles will be used this year and 66% will be lost into the ecosystem.</p>
       "
-      :p-reverse="false"
+      :p-reverse="true"
     />
 
     <!-- Full -->
     <Full 
-      p-background-color="#e65a5a"
+      p-background-color="#53565a"
       p-color="white"
       p-text="
-        <h2>
-          <span class='Full__large'>8 million tonnes<br></span>
-          <span class='Full__small'>of plastic end up in the ocean<br></span>
-          <span class='Full__large'>every year</span>
-        </h2> 
+        <h2 class='fitDouble'>
+          <span class='fitDouble__large'>8 million<br>tonnes</span>
+          <span class='fitDouble__small'>of plastic end up in the ocean</span>
+          <span class='fitDouble__large'>every year</span>
+        </h2>
       "
     />
 
@@ -53,12 +53,15 @@
     <!-- Split-text -->
     <Split-text
       p-color-a="#fff"
-      p-background-color-a="#53565a"
+      p-background-color-a="#e65a5a"
       p-text-a="
-        <h3 class='t-h2'>Transporting bottled waters generates 30,100 tonnes of CO2</h3>
+        <h2 class='fitDouble  fitDouble--small'>
+          <span class='fitDouble__small'>Transporting bottled water generates</span>
+          <span class='fitDouble__large'>30,100 tonnes</span>
+          <span class='fitDouble__small'>of CO<sub>2</sub></span>
+        </h2>
       "
-      p-color-b="#53565a"
-      p-background-color-b="#fff"
+      p-background-color-b="#ebebeb"
       p-text-b="
         <p class='t-lede'>If that wasn’t enough, lorries transporting heavy bottles of water around the UK has an enormous carbon footprint.</p>
       "
@@ -66,25 +69,33 @@
 
     <!-- Split -->
     <Split
-      p-image="10.png"
-      p-color="#53565a"
-      p-background-color="#ebebeb"
+      p-image="bottle-float.png"
+      p-color="#fff"
+      p-background-color="#503bd2"
       p-text="
-        <p>Throwing it away doesn’t mean it goes away. Plastic products take over 450 years to degrade and plastic bottles wash up on beaches and end up floating in vast mid-ocean trash islands.</p>
-        <p>Anyone who’s seen Blue Planet has seen the damage ocean pollution is doing to sea-birds, turtles, whales and other marine life.</p>
+        <h3>Throwing it away doesn’t mean it goes away</h3>
+        <p>Plastic bottles take over 450 years to degrade and wash up on beaches or end up floating in vast mid-ocean trash islands.</p>
+        <p>Anyone who’s seen Blue Planet has seen the damage ocean pollution is doing to sea-birds, turtles, whales.</p>
       "
       :p-reverse="false"
     />
 
-    <!-- Split -->
-    <Split
-      p-image="11.jpg"
+    <!-- Full -->
+    <Full 
+      p-background-color="#53565a"
       p-color="#fff"
-      p-background-color="#e65a5a"
       p-text="
-        <h3 class='t-h2'>If we don’t change our habits by 2050 there’ll be more plastic in the ocean than fish</h3>
+        <h2 class='fitDouble  fitDouble--small'>
+          <span class='fitDouble__small'>If we don’t change our habits by 2050,</span>
+          <span class='fitDouble__large'>there’ll be more plastic than fish in the sea</span>
+          <span class='fitDouble__small'>this speaks for itself</span>
+        </h2>
       "
-      :p-reverse="false"
+    />
+
+    <!-- Full -->
+    <Full 
+      p-image="sea-bottle.jpg"
     />
 
     <!-- Testimonial -->
@@ -100,9 +111,9 @@
 
     <!-- Signoff -->
     <Signoff
-      p-image="mission3.jpg"
-      p-background-color="#fff"
-      :p-cta="{ text: 'Our Solution', theme: 'white', link: 'https://vuejs.org/' }"
+      p-background-color="#6eafff"
+      p-image="lets-do.png"
+      :p-cta="{ text: 'Our mission', theme: 'white', link: '/mission' }"
     />
 
   </main>
