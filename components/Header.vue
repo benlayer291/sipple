@@ -277,14 +277,13 @@ export default {
 
   &__list {
     margin-bottom: 0;
-    padding: var(--bsu-lg);
+    padding: var(--bsu);
     font-weight: 300;
     text-transform: none;
-    
-    @media(--smMax) {
-      overflow: hidden;
-    }
 
+    @media(--sm) {
+      padding: var(--bsu-lg);
+    }
   }
 
   &__item {

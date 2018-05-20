@@ -99,11 +99,7 @@ export default {
     &.is-content {
 
       .Split.is-reverse & {
-        order: 0;
-
-        @media(--sm) {
-          order: 1;
-        }
+        order: 1;
       }
     }
 
@@ -112,6 +108,11 @@ export default {
       background-position: center;
       background-size: cover;
       margin-bottom: 0;
+
+      @media(--smMax) {
+        order: -1;
+      }
+      
     }
   }
 

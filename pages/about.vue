@@ -29,7 +29,7 @@
 
     <!-- Full -->
     <Full 
-      p-image="mission1.jpg"
+      p-image="bottles-pollution.jpg"
     />
 
     <!-- Full -->

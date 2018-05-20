@@ -13,7 +13,7 @@
       p-text="
         <h2 class='fitDouble'>
           <span class='fitDouble__small'>Globally, we use</span>
-          <span class='fitDouble__large'>a million</span>
+          <span class='fitDouble__large'>1 million</span>
           <span class='fitDouble__small'>plastic drink bottles</span>
           <span class='fitDouble__large'>every minute</span>
         </h2>
@@ -22,7 +22,7 @@
 
     <!-- Split -->
     <Split
-      p-image="8.jpg"
+      p-image="rubbish-heap.jpg"
       p-background-color="#fff"
       p-text="
         <h3>That’s a heck<br>of a lot</h3>
@@ -47,7 +47,7 @@
 
     <!-- Full -->
     <Full 
-      p-image="problem1.jpg"
+      p-image="sea-bottles.jpg"
     />
 
     <!-- Split-text -->
@@ -75,7 +75,7 @@
       p-text="
         <h3>Throwing it away doesn’t mean it goes away</h3>
         <p>Plastic bottles take over 450 years to degrade and wash up on beaches or end up floating in vast mid-ocean trash islands.</p>
-        <p>Anyone who’s seen Blue Planet has seen the damage ocean pollution is doing to sea-birds, turtles, whales.</p>
+        <p>Anyone who’s seen Blue Planet has seen the damage ocean pollution is doing to sea-birds, turtles, whales and other marine life.</p>
       "
       :p-reverse="false"
     />
