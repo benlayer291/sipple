@@ -30,10 +30,11 @@ body {
   background: var(--main-page-bg-selection);
 }
 
-.Main {
+.Main,
+.Footer {
   transform: translateX(0%) translateZ(0);
   backface-visibility: hidden;
-  transition: transform var(--trans);
+  transition: transform .5s var(--in-out);
 
   .Header.is-open ~ & {
     transform: translateX(80%) translateZ(0);

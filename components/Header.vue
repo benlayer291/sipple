@@ -40,7 +40,7 @@
         </ul>
       </div>
     </nav>
-
+    <div class="Header__bg" @click="closeMenu"></div>
   </header>
 </template>
 
@@ -79,6 +79,9 @@ export default {
     toggleMenu() {
       this.menuOpen = !this.menuOpen
     },
+    closeMenu() {
+      this.menuOpen = false
+    },
   }
 }
 </script>
@@ -93,13 +96,33 @@ export default {
   width: 100%;
   z-index: var(--z1);
 
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: color( var(--black) a(25%) );
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+      opacity 1s ease,
+      visibility 1s ease;
+
+    .Header.is-open & {
+      opacity: 1;
+      visibility: visible;
+      cursor: pointer;
+    }
+  }
+
   &__switch {
     position: absolute;
     top: 0;
     left: 0;
     padding: var(--bsu);
-    z-index: var(--z2);
-    color: var(--white);
+    z-index: 2;
     font-size: 20px;
 
     @media(--sm) {
@@ -107,19 +130,17 @@ export default {
       font-size: 40px;
       padding: var(--bsu-lg);
     }
-
-    .Header.is-open & {
-      color: var(--grey1);
-    }
   }
 
   &__bar {
+    position: relative;
+    z-index: -1;
     display: block;
     width: 100%;
     text-align: center;
     transform: translateX(0%) translateZ(0);
     backface-visibility: hidden;
-    transition: transform var(--trans);
+    transition: transform .5s var(--in-out);
 
     .Header.is-open & {
       transform: translateX(80%) translateZ(0);
@@ -208,10 +229,10 @@ export default {
       transform-origin: 50% 50%;
       text-align: left;
       outline: 1px solid transparent;
-      background-color: currentColor;
+      background-color: var(--white);
       transition: 
-        background-color var(--trans), 
-        transform var(--trans);
+        background .5s var(--in-out), 
+        transform .5s var(--in-out);
     }
     
     &:before, &:after {
@@ -231,6 +252,7 @@ export default {
     @nest .Header.is-open & {
 
       &, &:before, &:after {
+        background-color: var(--grey1);
       }
 
       & {
@@ -252,12 +274,13 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 80%;
     height: 100vh;
     background-color: var(--pink);
     transform: translateX(-100%) translateZ(0);
     backface-visibility: hidden;
-    transition: transform var(--trans);
+    transition: transform .5s var(--in-out);
 
     @media(--sm) {
       width: 50%;
@@ -289,29 +312,29 @@ export default {
   &__item {
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-10px) translateZ(0);
+    transform: translateY(10px) translateZ(0);
     backface-visibility: hidden;
     transition: 
-      opacity var(--trans),
-      visibility var(--trans),
-      transform var(--trans) .25s;
+      opacity .25s var(--in) .25s,
+      visibility .25s var(--in) .25s,
+      transform .25s var(--in) .25s;
 
     .Header.is-open & {
       opacity: 1;
       visibility: visible;
       transform: translateX(0) translateZ(0);
       transition: 
-        opacity var(--trans),
-        visibility var(--trans),
-        transform var(--trans);
+        opacity .25s var(--in),
+        visibility .25s var(--in),
+        transform .25s var(--in); 
 
-      &:nth-child(1) {transition-delay: .25s;}
-      &:nth-child(2) {transition-delay: .3s;}
-      &:nth-child(3) {transition-delay: .35s;}
-      &:nth-child(4) {transition-delay: .4s;}
-      &:nth-child(5) {transition-delay: .45s;}
-      &:nth-child(6) {transition-delay: .5s;}
-      &:nth-child(7) {transition-delay: .55s;}
+      &:nth-child(1) {transition-delay: .35s;}
+      &:nth-child(2) {transition-delay: .4s;}
+      &:nth-child(3) {transition-delay: .45s;}
+      &:nth-child(4) {transition-delay: .5s;}
+      &:nth-child(5) {transition-delay: .55s;}
+      &:nth-child(6) {transition-delay: .6s;}
+      &:nth-child(7) {transition-delay: .65s;}
     }
   }
 

@@ -76,17 +76,6 @@ export default {
 .Footer {
   color: var(--white);
   background-color: var(--blue);
-  transform: translateX(0%) translateZ(0);
-  backface-visibility: hidden;
-  transition: transform var(--trans);
-
-  .Header.is-open ~ & {
-    transform: translateX(80%) translateZ(0);
-
-    @media(--sm) {
-      transform: translateX(50%) translateZ(0);
-    }
-  }
 
   &__inner {
     padding-top: var(--bsu-lg);

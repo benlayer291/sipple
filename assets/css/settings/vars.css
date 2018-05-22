@@ -36,6 +36,9 @@
   --speed: .25s;
   --ease: ease;
   --trans: var(--speed) var(--ease);
+  --in: cubic-bezier(0.4, 0.0, 0.2, 1); 
+  --in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   /* Font */
   --font-sans: "Faro", system-ui;
