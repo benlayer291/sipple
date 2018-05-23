@@ -10,13 +10,17 @@ html {
   min-height: 100%;
   font-size: 1em;
   color: var(--main-page-color);
-  background: var(--main-page-bg);
+  background: var(--blue);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-rendering: optimizeLegibility;
+}
+
+html.has-nav {
+  overflow: hidden;
 }
 
 body {

@@ -20,11 +20,25 @@ export default {
     Header,
     Footer,
   },
+  data() {
+    return {
+      headerOpen: false,
+    }
+  },
+  head() {
+    return {
+      htmlAttrs: {
+          class: this.headerOpen ? 'has-nav' : ''
+      }
+    }
+  },
   mounted () {
     window.addEventListener('scroll', (e) => {
       this.$bus.$emit('scroll', window.scrollY)
     })
+    this.$bus.$on('header::toggle', (headerOpen) => {
+      this.headerOpen = headerOpen
+    })
   }
 }
 </script>
-
