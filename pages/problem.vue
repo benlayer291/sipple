@@ -138,5 +138,10 @@ export default {
     Testimonial,
     Signoff,
   },
+  head () {
+    return {
+      title: 'The problem | Sipple',
+    }
+  },
 }
 </script>

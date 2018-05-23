@@ -104,5 +104,10 @@ export default {
     Full,
     Split,
   },
+  head () {
+    return {
+      title: 'The solution | Sipple',
+    }
+  },
 }
 </script>

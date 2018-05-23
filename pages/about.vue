@@ -92,6 +92,11 @@ export default {
     Full,
     Split,
     Signoff,
-  }
+  },
+  head () {
+    return {
+      title: 'About us | Sipple',
+    }
+  },
 }
 </script>

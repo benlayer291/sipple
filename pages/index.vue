@@ -110,6 +110,11 @@ export default {
     Full,
     Split,
     SplitText,
-  }
+  },
+  head () {
+    return {
+      title: 'Home | Sipple',
+    }
+  },
 }
 </script>
