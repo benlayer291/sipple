@@ -110,6 +110,20 @@ export default {
     Full,
     Split,
     SplitText,
-  }
+  },
+  data () {
+    return {
+      title: 'Home | Sipple',
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { name: 'og:title', content: this.title },
+        { name: 'twitter:title', content: this.title },
+      ]
+    }
+  },
 }
 </script>

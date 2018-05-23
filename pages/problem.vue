@@ -138,5 +138,19 @@ export default {
     Testimonial,
     Signoff,
   },
+  data () {
+    return {
+      title: 'The problem | Sipple'
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { name: 'og:title', content: this.title },
+        { name: 'twitter:title', content: this.title },
+      ]
+    }
+  },
 }
 </script>
