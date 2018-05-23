@@ -48,7 +48,6 @@
 import SvgIcon from '@/components/SvgIcon'
 
 export default {
-
   components: {
     SvgIcon
   },
@@ -57,11 +56,6 @@ export default {
       menuOpen: false,
       hasScrolled: false
     }
-  },
-  mounted () {
-    this.$bus.$on('scroll', () => {
-      if ((window.scrollY > 50) !== this.hasScrolled) this.scroller(!this.hasScrolled)
-    })
   },
   methods: {
     scroller(val) {
@@ -78,16 +72,28 @@ export default {
     },
     toggleMenu() {
       this.menuOpen = !this.menuOpen
+      this.$bus.$emit('header::toggle', this.menuOpen)
     },
     closeMenu() {
       this.menuOpen = false
     },
+  },
+  mounted () {
+    this.$bus.$on('scroll', () => {
+      if ((window.scrollY > 50) !== this.hasScrolled) {
+        this.scroller(!this.hasScrolled)
+      }
+    })
   }
 }
 </script>
 
 <style lang="postcss">
 @import "../assets/css/settings/vars";
+
+.has-nav {
+  overflow: hidden;
+}
 
 .Header {
   position: fixed;

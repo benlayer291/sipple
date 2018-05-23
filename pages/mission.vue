@@ -62,6 +62,20 @@ export default {
     Full,
     Split,
     Signoff,
-  }
+  },
+  data () {
+    return {
+      title: 'Our mission | Sipple'
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { name: 'og:title', content: this.title },
+        { name: 'twitter:title', content: this.title },
+      ]
+    }
+  },
 }
 </script>
