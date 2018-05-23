@@ -8,18 +8,16 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Sipple' },
-      { name: 'msapplication-TileColor', content: '#151515' },
-      { name: 'theme-color', content: '#151515' }
-      { name: 'og:title', content: 'Stock Malaki | Malaki' },
-      { name: 'twitter:title', content: 'Stock Malaki | Malaki' },
-      { name: 'description', content: 'WE ARE ALWAYS LOOKING FOR NEW DISTRIBUTORS TO PARTNER WITH. LETS GROW SOMETHING AMAZING.' },
-      { name: 'og:description', content: 'WE ARE ALWAYS LOOKING FOR NEW DISTRIBUTORS TO PARTNER WITH. LETS GROW SOMETHING AMAZING.' },
-      { name: 'twitter:description', content: 'WE ARE ALWAYS LOOKING FOR NEW DISTRIBUTORS TO PARTNER WITH. LETS GROW SOMETHING AMAZING.' },
-      { name: 'og:image', content: '/imgs/twosome-1.jpg' },
-      { name: 'twitter:image', content: '/imgs/twosome-1.jpg' },
+      { name: 'msapplication-TileColor', content: '#503bd2' },
+      { name: 'theme-color', content: '#503bd2' },
+      { name: 'description', content: 'The smarter way to hydrate on-the-go without the plastic waste.' },
+      { name: 'og:description', content: 'The smarter way to hydrate on-the-go without the plastic waste.' },
+      { name: 'twitter:description', content: 'The smarter way to hydrate on-the-go without the plastic waste.' },
+      { name: 'og:image', content: '/imgs/___.jpg' },
+      { name: 'twitter:image', content: '/imgs/___.jpg' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@WeAreMalaki' },
-      { name: 'twitter:creator', content: '@WeAreMalaki' }
+      { name: 'twitter:site', content: '@___' },
+      { name: 'twitter:creator', content: '@___' }
     ],
     script: [
       // { src: 'https://maps.googleapis.com/maps/api/js?libraries=places' }

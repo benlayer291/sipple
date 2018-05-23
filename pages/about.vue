@@ -93,9 +93,18 @@ export default {
     Split,
     Signoff,
   },
+  data () {
+    return {
+      title: 'About us | Sipple'
+    }
+  },
   head () {
     return {
-      title: 'About us | Sipple',
+      title: this.title,
+      meta: [
+        { name: 'og:title', content: this.title },
+        { name: 'twitter:title', content: this.title },
+      ]
     }
   },
 }
