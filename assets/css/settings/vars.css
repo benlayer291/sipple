@@ -1,0 +1,83 @@
+/*------------------------------------*\
+  #Global Variables
+\*------------------------------------*/
+
+/**
+ * Global Variables.
+ */
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  --grey1: #53565a;
+  --grey2: #ebebeb;
+
+  --turquoise: #5ae6d2;
+  --blue: #503bd2;
+  --blue-light: #6eafff;
+  --pink: #f9e0cd;
+  --red: #e65a5a;
+  
+
+  /* Base Spacing Units */
+  --bsu-sm: 10px;
+  --bsu: 20px;
+  --bsu-lg: 50px;
+  --bsu-xl: 80px;
+  --bsu-xxl: 160px;
+
+  /* Base Max Width */
+
+  --bmw: 1440px;
+  --gutter: 40px;
+
+  /* Transition */
+  --speed: .25s;
+  --ease: ease;
+  --trans: var(--speed) var(--ease);
+  --in: cubic-bezier(0.4, 0.0, 0.2, 1); 
+  --in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Font */
+  --font-sans: "Faro", system-ui;
+  --font-slab: "Plaak", system-ui;
+
+  /* Global */
+  --main-page-bg: var(--white);
+  --main-page-color: var(--grey1);
+  --main-page-bg-selection: var(--blue);
+  --main-page-color-selection: var(--white);
+
+  /* Type */
+  --main-page-font: var(--font-sans);
+
+  /* Layers */
+  --z1: 10;
+  --z2: 20;
+  --z3: 30;
+  --z4: 40;
+  --z5: 50;
+
+  /* UI */
+--burger-height: .05em;
+--burger-width:  1em;
+--burger-gutter: .25em;
+}
+
+/**
+ * Breakpoints.
+ */
+
+@custom-media --iphone only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait);
+
+@custom-media --sm (width >= 700px);
+@custom-media --smMax (width <= 699px);
+@custom-media --md (width >= 992px);
+@custom-media --mdMax (width <= 991px);
+@custom-media --lg (width >= 1200px);
+@custom-media --lgMax (width <= 1199px);
+@custom-media --bmw (width >= 1440px);
+@custom-media --bmwMax (width <= 1439px);
+@custom-media --xl (width >= 2000px);

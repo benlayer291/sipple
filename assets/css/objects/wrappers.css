@@ -1,0 +1,20 @@
+/*------------------------------------*\
+  #Wrappers
+\*------------------------------------*/
+
+.wrapper {
+  max-width: var(--bmw);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--bsu);
+  padding-left: var(--bsu);
+
+  @media (--sm) {
+    padding-right: var(--bsu-lg);
+    padding-left: var(--bsu-lg);
+  }
+
+  &--noMaxWidth {
+    max-width: none;
+  }
+}

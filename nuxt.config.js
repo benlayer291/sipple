@@ -16,11 +16,63 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: false,
+  /*
+  ** Plugins
+  */
+  plugins: [
+    '~/plugins/bus'
+  ],
+  /*
+  ** CSS
+  */
+  generate: {
+    routes: [
+      '/',
+      '/problem',
+      '/solution',
+      '/mission',
+      '/solution',
+      '/story',
+    ],
+    subFolders: false
+  },
+  sitemap: {
+    exclude: ['/styleguide'],
+    routes: [
+      '/',
+      '/problem',
+      '/solution',
+      '/mission',
+      '/solution',
+      '/story',
+    ],
+  },
+  /*
+  ** CSS
+  */
+  css: [
+    // CSS file in the project
+    { 
+      src: '@/assets/css/base.css', 
+      lang: 'postcss'
+    }
+  ],
   /*
   ** Build configuration
   */
   build: {
+    /*
+    ** Process css with postcss plugins
+    */
+    postcss: [
+      require('postcss-import')(),
+      require('postcss-calc')(),
+      require('postcss-nested')(),
+      require('postcss-cssnext')({
+        browsers: ['last 2 versions']
+      })
+    ],
     /*
     ** Run ESLint on save
     */
