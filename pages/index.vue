@@ -23,7 +23,7 @@
       p-color-a="#fff"
       p-background-color-a="#e65a5a"
       p-text-a="
-        <h2 class='fitDouble'>
+        <h2 class='fitDouble  fitDouble--split'>
           <span class='fitDouble__large'>Water</span>
           <span class='fitDouble__small'>without the</span>
           <span class='fitDouble__large'>waste</span>

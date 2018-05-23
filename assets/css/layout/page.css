@@ -37,10 +37,6 @@ body {
   transition: transform .5s var(--in-out);
 
   .Header.is-open ~ & {
-    transform: translateX(80%) translateZ(0);
-
-    @media(--sm) {
-      transform: translateX(50%) translateZ(0);
-    }
+    transform: translateX(50%) translateZ(0);  
   }
 }

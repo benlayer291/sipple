@@ -83,11 +83,7 @@ export default {
   }
 
   &__content {
-    padding: 15%;
-
-    @media(--sm) {
-      padding: 15% var(--bsu-lg);
-    }
+    padding: 14% 10% calc(14% - var(--bsu) );
 
     & h3 {
       max-width: 14em;

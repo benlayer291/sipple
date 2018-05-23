@@ -10,6 +10,6 @@ h5,.t-h5,
 h6,.t-h6,
 blockquote, p, address,
 table, legend, pre,
-ul, ol, .media {
+ul, ol, .button {
   margin-bottom: var(--bsu);
 }

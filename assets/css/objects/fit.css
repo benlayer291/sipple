@@ -19,15 +19,19 @@
 
 /* Full h1 & h2 only */
 .fitDouble {
-  font-size: 13.75vw;
-  
-  @media(--sm) {
-    font-size: 6.825vw;
-  }
+  font-size: 6.825vw;
 
   &--small {
-    @media(--sm) {
-      font-size: 5.7vw;
+    font-size: 4.875vw;
+  }
+
+  &--split {
+    @media(--smMax) {
+      font-size: 13.75vw;
+
+      &.fitDouble--small {
+        font-size: 6.825vw;
+      }
     }
   }
 
@@ -38,6 +42,12 @@
   &__large {
     display: block;
     font-size: 2.571428571em;
+
+    .fitDouble--small & {
+      @media(--sm) {
+        font-size: 3em;
+      }
+    }
   }
 
   &__small + &__large {

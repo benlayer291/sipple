@@ -71,10 +71,7 @@
  */
 
 @custom-media --iphone only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait);
-@custom-media --xxs (width >= 500px);
-@custom-media --xxsMax (width <= 499px);
-@custom-media --xs (width >= 600px);
-@custom-media --xsMax (width <= 599px);
+
 @custom-media --sm (width >= 700px);
 @custom-media --smMax (width <= 699px);
 @custom-media --md (width >= 992px);

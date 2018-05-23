@@ -55,9 +55,9 @@
       p-color-a="#fff"
       p-background-color-a="#e65a5a"
       p-text-a="
-        <h2 class='fitDouble  fitDouble--small'>
-          <span class='fitDouble__small'>Transporting bottled water generates</span>
-          <span class='fitDouble__large'>30,100 tonnes</span>
+        <h2 class='fitDouble  fitDouble--small  fitDouble--split'>
+          <span class='fitDouble__small'>Transporting bottled<br>water generates</span>
+          <span class='fitDouble__large'>30,100<br>tonnes</span>
           <span class='fitDouble__small'>of CO<sub>2</sub></span>
         </h2>
       "

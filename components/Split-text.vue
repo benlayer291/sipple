@@ -1,13 +1,13 @@
 <template>
-  <section class="Split">
+  <section class="Split  Split--text">
     <div class="grid">
-      <div class="Split__item  is-content  grid__item  u-1/2@sm" :style="backgroundStyleA">
+      <div class="Split__item  is-text  grid__item  u-1/2@sm" :style="backgroundStyleA">
         <div class="Split__content" :style="`color: ${colorA}`">
           <div class="Split__text" v-html="textA"></div>
           <a v-if="ctaA" :href="ctaA.link" class="Split__button  button" :class="'button--' + ctaA.theme">{{ ctaA.text }}</a>
         </div>
       </div>
-      <div class="Split__item  is-content  grid__item  u-1/2@sm" :style="backgroundStyleB">
+      <div class="Split__item  is-text  grid__item  u-1/2@sm" :style="backgroundStyleB">
         <div class="Split__content" :style="`color: ${colorB}`">
           <div class="Split__text" v-html="textB"></div>
           <a v-if="ctaB" :href="cta.linkB" class="Split__button  button" :class="'button--' + cta.themeB">{{ cta.textB }}</a>

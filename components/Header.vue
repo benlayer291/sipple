@@ -143,11 +143,7 @@ export default {
     transition: transform .5s var(--in-out);
 
     .Header.is-open & {
-      transform: translateX(80%) translateZ(0);
-
-      @media(--sm) {
-        transform: translateX(50%) translateZ(0);
-      }
+      transform: translateX(50%) translateZ(0);
     }
   }
 
@@ -229,7 +225,7 @@ export default {
       transform-origin: 50% 50%;
       text-align: left;
       outline: 1px solid transparent;
-      background-color: var(--white);
+      background-color: var(--grey2);
       transition: 
         background .5s var(--in-out), 
         transform .5s var(--in-out);
@@ -275,7 +271,7 @@ export default {
     top: 0;
     left: 0;
     z-index: 1;
-    width: 80%;
+    width: 100%;
     height: 100vh;
     background-color: var(--pink);
     transform: translateX(-100%) translateZ(0);
@@ -292,10 +288,20 @@ export default {
   }
 
   &__scroll {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
     padding-top: var(--bsu-xl);
     padding-bottom: var(--bsu-xl);
+    height: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+
+    @media(--sm) {
+      text-align: left;
+      justify-content: flex-start;
+    }
   }
 
   &__list {

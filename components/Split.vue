@@ -1,7 +1,7 @@
 <template>
   <section class="Split" :class="{'is-reverse': reverse}" :style="backgroundStyle">
     <div class="grid">
-      <div class="Split__item  is-content  grid__item  u-1/2@sm">
+      <div class="Split__item  is-text  grid__item  u-1/2@sm">
         <div class="Split__content" :style="`color: ${color}`">
           <div class="Split__text" v-html="text"></div>
           <a v-if="cta" :href="cta.link" class="Split__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
@@ -95,8 +95,7 @@ export default {
     align-items: center;
     justify-content: center;
 
-
-    &.is-content {
+    &.is-text {
 
       .Split.is-reverse & {
         order: 1;
@@ -118,7 +117,7 @@ export default {
 
   &__content {
     width: 100%;
-    padding: 15%;
+    padding: 15.5% 10% calc(15.5% - var(--bsu-sm) );
     text-align: center;
 
     & h3,

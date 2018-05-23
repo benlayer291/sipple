@@ -54,16 +54,16 @@ export default {
 
 .Testimonial {
   text-align: center;
-  padding: 10%;
-
-  @media(--sm) {
-    padding: 20% 10%;
-  }
+  padding: 14.5% 10% calc(14.5% - var(--bsu));
 
   &__image {
-    max-width: 200px;
+    max-width: 100px;
     margin-left: auto;
     margin-right: auto;
+
+    @media(--sm) {
+      max-width: 200px;
+    }
   }
 
   &__media {
@@ -86,6 +86,7 @@ export default {
   &__author {
     display: block;
     margin-top: 3em;
+    margin-bottom: var(--bsu);
   }
 }
 
