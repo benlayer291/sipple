@@ -19,9 +19,6 @@ module.exports = {
       { name: 'twitter:site', content: '@___' },
       { name: 'twitter:creator', content: '@___' }
     ],
-    script: [
-      // { src: 'https://maps.googleapis.com/maps/api/js?libraries=places' }
-    ],
     link: [
       {
         rel: 'apple-touch-icon',
@@ -58,10 +55,7 @@ module.exports = {
   /*
   ** Modules
   */
-  modules: [ 
-    ['@nuxtjs/google-analytics', {
-      id: ''
-    }],
+  modules: [
     '@nuxtjs/sitemap',
   ],
   /*
