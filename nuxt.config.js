@@ -19,9 +19,6 @@ module.exports = {
       { name: 'twitter:site', content: '@___' },
       { name: 'twitter:creator', content: '@___' }
     ],
-    script: [
-      // { src: 'https://maps.googleapis.com/maps/api/js?libraries=places' }
-    ],
     link: [
       {
         rel: 'apple-touch-icon',
@@ -56,10 +53,16 @@ module.exports = {
   */
   loading: false,
   /*
+  ** Modules
+  */
+  modules: [
+    '@nuxtjs/sitemap',
+  ],
+  /*
   ** Plugins
   */
   plugins: [
-    '~/plugins/bus'
+    '@/plugins/bus'
   ],
   /*
   ** CSS
@@ -71,19 +74,22 @@ module.exports = {
       '/solution',
       '/mission',
       '/solution',
-      '/story',
+      '/about',
     ],
     subFolders: false
   },
   sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.sipplehydration.com/',
     exclude: ['/styleguide'],
+    generate: true,
     routes: [
       '/',
       '/problem',
       '/solution',
       '/mission',
       '/solution',
-      '/story',
+      '/about',
     ],
   },
   /*
