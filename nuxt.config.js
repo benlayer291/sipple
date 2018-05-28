@@ -92,7 +92,7 @@ module.exports = {
       '/solution',
       '/mission',
       '/solution',
-      '/story',
+      '/about',
     ],
   },
   /*
