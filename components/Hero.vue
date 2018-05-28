@@ -51,6 +51,7 @@ export default {
 @import "../assets/css/settings/vars";
 
 .Hero {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -59,9 +60,27 @@ export default {
   padding: var(--bsu-lg);
   color: var(--white);
 
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    height: 11vh;
+    background-color: inherit;
+    animation: resize .5s var(--in-out) .5s both;
+    backface-visibility: hidden;
+  }
+
   &__text {
+    position: relative;
+    z-index: 1;
     text-align: center;
     margin: auto;
+    opacity: 0;
+    animation: fadeIn .5s var(--in-out) .5s both;
+    backface-visibility: hidden;
 
     & h1 {
       max-width: 20em;
@@ -74,6 +93,26 @@ export default {
       margin-right: auto;
       margin-left: auto;
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10vh) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) translateZ(0);
+  }
+}
+
+@keyframes resize {
+  from {
+    transform: translateY(100%) translateZ(0);
+  }
+  to {
+    transform: translateY(0) translateZ(0);
   }
 }
 </style>
