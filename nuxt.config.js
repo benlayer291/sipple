@@ -80,7 +80,7 @@ module.exports = {
       '/solution',
       '/mission',
       '/solution',
-      '/story',
+      '/about',
     ],
     subFolders: false
   },
