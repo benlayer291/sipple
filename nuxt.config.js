@@ -79,6 +79,8 @@ module.exports = {
     subFolders: false
   },
   sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.sipplehydration.com/',
     exclude: ['/styleguide'],
     generate: true,
     routes: [
