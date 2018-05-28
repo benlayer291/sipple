@@ -80,6 +80,7 @@ module.exports = {
   },
   sitemap: {
     exclude: ['/styleguide'],
+    generate: true,
     routes: [
       '/',
       '/problem',
