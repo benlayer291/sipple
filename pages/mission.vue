@@ -29,7 +29,7 @@
       p-background-color="#53565a"
       p-image="station-cape-alt.png"
       p-background-color-alt="#6eafff"
-      :p-cta="{ text: 'Our Solution', theme: 'white', link: 'https://vuejs.org/' }"
+      :p-cta="{ text: 'Our Solution', theme: 'white', link: '/solution' }"
       p-text="
         <p>Reversing the environmental damage we’ve already done is no small task.</p>
         <p>But together we’re making a start. One bottle at a time.</p>

@@ -1,13 +1,13 @@
 <template>
   <section class="Split" :class="{'is-reverse': reverse}" :style="backgroundStyle">
     <div class="grid">
-      <div class="Split__item  is-text  grid__item  u-1/2@sm">
+      <div class="Split__item  is-text  grid__item  u-1/2@sm" :class="{'is-swapped': swapped == 'text'}">
         <div class="Split__content" :style="`color: ${color}`">
           <div class="Split__text" v-html="text"></div>
           <a v-if="cta" :href="cta.link" class="Split__button  button" :class="'button--' + cta.theme">{{ cta.text }}</a>
         </div>
       </div>
-      <div class="Split__item  is-image  grid__item  u-1/2@sm" :style="backgroundStyleAlt">
+      <div class="Split__item  is-image  grid__item  u-1/2@sm" :style="backgroundStyleAlt" :class="{'is-swapped': swapped == 'image'}">
         <div :class="`Split__image  media  media--${ratio}`"></div>
       </div>
     </div>
@@ -43,6 +43,10 @@ export default {
       required: true,
       default: false
     },
+    pSwapped: {
+      type: String,
+      required: false,
+    },
     pText: {
       type: String,
       required: false,
@@ -58,6 +62,7 @@ export default {
       color: this.pColor,
       cta: this.pCta,
       reverse: this.pReverse,
+      swapped: this.pSwapped,
       text: this.pText,
       ratio: this.pRatio,
     }
@@ -94,6 +99,7 @@ export default {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    min-height: 400px;
 
     &.is-text {
 
@@ -109,11 +115,18 @@ export default {
       margin-bottom: 0;
 
       @media(--smMax) {
-        order: -1;
+        min-height: 100vw;
       }
-      
+    }
+
+
+    &.is-swapped {
+      @media(--smMax) {
+        order: -1!important;
+      }
     }
   }
+
 
   &__content {
     width: 100%;
@@ -125,6 +138,12 @@ export default {
       max-width: 14em;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    h4 {
+      @media(--smMax) {
+        font-size: 18px;
+      }
     }
 
     & p {

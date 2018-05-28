@@ -5,7 +5,7 @@
     <Hero 
       p-text="
         <h1 class='t-h3'>We’re launching<br>summer 2018.</h1>
-        <p>The momentum against disposable plastics is building every day. Join us in creating change. To become a partner, or to stay in the loop as we get ready for take-off, <a href='#'>sign-up below<a/></a></p>
+        <p>The momentum against disposable plastics is building every day. Join us in creating change. To become a partner, or to stay in the loop as we get ready for take-off, <a href='#contact'>sign-up below<a/></a></p>
       "
     />
 
@@ -35,6 +35,7 @@
         <p class='t-small'>Golden rule: bring something to drink from. But if you’ve forgotten, you can buy a reusable, 500ml stainless steel Sipple bottle on the spot, no questions asked.</p>
       "
       :p-reverse="false"
+      p-swapped="image"
     />
 
     <!-- Split -->
@@ -46,6 +47,7 @@
         <p>Hydration Stations have a contactless payment system. So you can pay for your refill with a “tap” of your card or a “wave” of your Apple Pay… did our water puns make a splash?</p>
       "
       :p-reverse="false"
+      p-swapped="image"
     />
 
     <!-- Full -->
@@ -87,6 +89,7 @@
         <p>We recommend you rinse regularly between uses, store your bottle with the lid off and wash your bottle occasionally with hot soapy water. And never put it in the dishwasher.</p>
       "
       :p-reverse="false"
+      p-swapped="image"
     />
 
   </main>

@@ -1,9 +1,9 @@
 <template>
-  <footer class="Footer">
+  <footer class="Footer" id="contact">
     <div class="Footer__inner  wrapper">
       <div class="grid  grid--rigid">
         
-        <div class="grid__item  u-1/3@md">
+        <!-- <div class="grid__item  u-1/3@md">
           <div class="Footer__item">
             <h4>Find us on social</h4>
             <ul class="Footer__social">
@@ -24,7 +24,8 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
+        
         <div class="grid__item  u-1/3@md">
           <div class="Footer__item">
             <h4>Keep me posted</h4>
@@ -40,6 +41,7 @@
             </form>
           </div>
         </div>
+
         <div class="grid__item  u-1/3@md">
           <div class="Footer__item">
             <h4>Sipple hydration</h4>
@@ -85,6 +87,15 @@ export default {
   &__item {
     max-width: 300px;
     margin-bottom: var(--bsu-lg);
+  }
+
+  &__logo {
+    font-size: 91px;
+    line-height: 0;
+
+    @media(--sm) {
+      font-size: 182px;
+    }
   }
 
   &__social {
