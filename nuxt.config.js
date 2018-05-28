@@ -56,10 +56,19 @@ module.exports = {
   */
   loading: false,
   /*
+  ** Modules
+  */
+  modules: [ 
+    ['@nuxtjs/google-analytics', {
+      id: ''
+    }],
+    '@nuxtjs/sitemap',
+  ],
+  /*
   ** Plugins
   */
   plugins: [
-    '~/plugins/bus'
+    '@/plugins/bus'
   ],
   /*
   ** CSS
