@@ -15,6 +15,7 @@
         <p>Common sense at the time said selling water in a plastic bottle was a terrible idea. But someone sensed money to be made and did it anyway.</p>
       "
       :p-reverse="true"
+      p-swapped="text"
     />
 
     <!-- Full -->
@@ -36,6 +37,7 @@
     <Full 
       p-background-color="#503bd2"
       p-background-image="but-tide.png"
+      p-background-position="center"
     />
 
     <!-- Split -->
@@ -75,6 +77,7 @@
       p-image="station-cape.png"
       :p-cta="{ text: 'Our solution', theme: 'white', link: '/solution' }"
       :p-reverse="false"
+      p-swapped="image"
     />
 
   </main>

@@ -38,6 +38,7 @@ export default {
     })
     this.$bus.$on('header::toggle', (headerOpen) => {
       this.headerOpen = headerOpen
+      console.log(headerOpen)
     })
   }
 }

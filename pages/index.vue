@@ -11,7 +11,7 @@
       p-background-color="#6eafff"
       p-text="
         <p>Sipple Hydration Stations serve freshly filtered, UV purified water, either cool or icy cold.</p> 
-        <p>We are the sustainable alternative to bottled water.</p>
+        <p>We’re the sustainable alternative to bottled water.</p>
       "
       p-image="station-cape.png"
       :p-cta="{ text: 'About us', theme: 'white', link: '/about' }"
@@ -71,9 +71,10 @@
       p-background-image="finger-bottle.png"
       p-text="
         <h3>Our future’s not disposable</h3>
-        <p>Our goal is to change the way the nation drinks water, eliminate excessive waste and protect the planet.</p>
+        <p>Our goal is to change the way the UK hydrates, eliminate excessive waste and protect the planet.</p>
+        <p>Anyone can join us.</p>
       "
-      :p-cta="{ text: 'Join the movement', theme: 'white', link: 'https://vuejs.org/' }"
+      :p-cta="{ text: 'Our mission', theme: 'white', link: '/mission' }"
     />
 
     <!-- Split -->
@@ -81,7 +82,7 @@
       p-color="#fff"
       p-image="cloud-tele.jpg"
       p-background-color="#53565a"
-      :p-cta="{ text: 'Contact', theme: 'white', link: 'https://vuejs.org/' }"
+      :p-cta="{ text: 'Get in touch', theme: 'white', link: 'mailto:hello@sipplehydration.com' }"
       p-text="
         <h3>Say hi</h3>
         <p>Drop us a line about where to find us.</p>
@@ -93,6 +94,7 @@
     <Full 
       p-background-color="#6eafff"
       p-background-image="join-movement.png"
+      p-background-position="center"
     />
 
   </main>

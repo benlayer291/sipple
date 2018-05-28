@@ -57,7 +57,7 @@ export default {
   padding: 14.5% 10% calc(14.5% - var(--bsu));
 
   &__image {
-    max-width: 100px;
+    max-width: 75px;
     margin-left: auto;
     margin-right: auto;
 
@@ -69,7 +69,11 @@ export default {
   &__media {
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: var(--bsu-lg);
+    margin-bottom: 30px;
+
+    @media(--sm) {
+      margin-bottom: var(--bsu-lg);
+    }
   }
 
   &__quote {
