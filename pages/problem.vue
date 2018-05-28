@@ -78,6 +78,7 @@
         <p>Anyone who’s seen Blue Planet has seen the damage ocean pollution is doing to sea-birds, turtles, whales and other marine life.</p>
       "
       :p-reverse="false"
+      p-swapped="image"
     />
 
     <!-- Full -->

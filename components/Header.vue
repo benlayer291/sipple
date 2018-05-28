@@ -6,9 +6,9 @@
         <span class="Header__logo">
           <SvgIcon className="i-logo" title="Sipple Logo" file="logo" />
         </span>
-        <span class="Header__logoWave">
+        <!-- <span class="Header__logoWave">
           <SvgIcon className="i-logo-wave" title="Sipple Wave Logo" file="logo-wave" />
-        </span>
+        </span> -->
       </nuxt-link>
     </div>
 
@@ -18,26 +18,28 @@
 
     <nav class="Header__nav">
       <div class="Header__scroll">
-        <ul class="Header__list  t-lede">
-          <li class="Header__item">
-            <nuxt-link to="/" class="Header__link" @click.native="toggleMenu">Home</nuxt-link>
-          </li>
-          <li class="Header__item">
-            <nuxt-link to="/problem" class="Header__link" @click.native="toggleMenu">The problem</nuxt-link>
-          </li>
-          <li class="Header__item">
-            <nuxt-link to="/solution" class="Header__link" @click.native="toggleMenu">The solution</nuxt-link>
-          </li>
-          <li class="Header__item">
-            <nuxt-link to="/mission" class="Header__link" @click.native="toggleMenu">Our mission</nuxt-link>
-          </li>
-          <li class="Header__item">
-            <nuxt-link to="/about" class="Header__link" @click.native="toggleMenu">About us</nuxt-link>
-          </li>
-          <li class="Header__item">
-            <a href="#" class="Header__link" @click.prevent="scrollTo('.Footer')">Contact</a>
-          </li>
-        </ul>
+        <div class="Header__inner">
+          <ul class="Header__list  t-lede">
+            <li class="Header__item">
+              <nuxt-link to="/" class="Header__link" @click.native="toggleMenu">Home</nuxt-link>
+            </li>
+            <li class="Header__item">
+              <nuxt-link to="/problem" class="Header__link" @click.native="toggleMenu">The problem</nuxt-link>
+            </li>
+            <li class="Header__item">
+              <nuxt-link to="/solution" class="Header__link" @click.native="toggleMenu">The solution</nuxt-link>
+            </li>
+            <li class="Header__item">
+              <nuxt-link to="/mission" class="Header__link" @click.native="toggleMenu">Our mission</nuxt-link>
+            </li>
+            <li class="Header__item">
+              <nuxt-link to="/about" class="Header__link" @click.native="toggleMenu">About us</nuxt-link>
+            </li>
+            <li class="Header__item">
+              <a href="#" class="Header__link" @click.prevent="scrollTo('.Footer')">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <div class="Header__bg" @click="closeMenu"></div>
@@ -63,12 +65,13 @@ export default {
     },
     scrollTo(target) {
       this.menuOpen = false
+      this.$bus.$emit('header::toggle', this.menuOpen)
 
       setTimeout(() => {
         document.querySelector(target).scrollIntoView({ 
           behavior: 'smooth' 
         });
-      }, 250)
+      }, 500)
     },
     toggleMenu() {
       this.menuOpen = !this.menuOpen
@@ -76,11 +79,12 @@ export default {
     },
     closeMenu() {
       this.menuOpen = false
+      this.$bus.$emit('header::toggle', this.menuOpen)
     },
   },
   mounted () {
     this.$bus.$on('scroll', () => {
-      if ((window.scrollY > 50) !== this.hasScrolled) {
+      if ((window.scrollY > 1) !== this.hasScrolled) {
         this.scroller(!this.hasScrolled)
       }
     })
@@ -173,24 +177,23 @@ export default {
   &__logo {
     display: block;
     opacity: 1;
-    transform: scale(1) translateZ(0);
+    visibility: visible;
+    transform: translateY(0) translateZ(0);
+    /* transform: scale(1) translateZ(0); */
     backface-visibility: hidden;
     transition: 
       opacity var(--trans),
+      visibility var(--trans),
       transform var(--trans);
-
-    .i-logo {
-      width: 1em;
-      height: .384615385em;
-    }
 
     .Header.is-scrolled & {
       opacity: 0;
-      transform: scale(0) translateZ(0);
+      visibility: hidden;
+      transform: translateY(-.1em) translateZ(0);
     }
   }
 
-  &__logoWave {
+  /* &__logoWave {
     position: absolute;
     top: -.05em;
     left: -.0em;
@@ -215,7 +218,7 @@ export default {
       opacity: 1;
       transform: scale(1) translateZ(0);
     }
-  }
+  } */
 
   &__burger {
     position: relative;
@@ -241,6 +244,7 @@ export default {
       content: '';
       position: absolute;
       top: 0;
+      border-radius: 50%/100px 100px 0 0;
     }
 
     &:before {
@@ -294,15 +298,20 @@ export default {
   }
 
   &__scroll {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__inner {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     text-align: center;
+    min-height: 100%;
     padding-top: var(--bsu-xl);
     padding-bottom: var(--bsu-xl);
-    height: 100%;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+
 
     @media(--sm) {
       text-align: left;
