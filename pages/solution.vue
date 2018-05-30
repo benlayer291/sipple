@@ -68,7 +68,7 @@
       p-background-color-alt="#f9e0cd"
       p-text="
         <h4>Hey, good lookin’</h4>
-        <p class='t-small'>Our stylish Sipple Bottle is designed to look good whether you’re hiking, biking or just sat on your sofa. It’s finished with a high quality coating. And best of all, it saves the environment. All for a cool £8.95.</p>
+        <p class='t-small'>Our stylish Sipple Bottle is designed to look good whether you’re hiking, biking or just sat on your sofa. It’s finished with a high quality coating. And best of all, it saves the environment.</p>
         <h4>Tough and safe</h4>
         <p class='t-small'>Our stylish, reusable Sipple Bottle is made of high-grade stainless steel. It’s tough, non-toxic and completely BPA free and it won’t taint the flavour of what you put inside.</p>
         <h4>Stay cool (or hot)</h4>
